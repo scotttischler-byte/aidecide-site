@@ -316,6 +316,10 @@ button{font-family:inherit; cursor:pointer; border:none;}
       showThinking(function(){
         bubble('agent', step.agent);
         stepIndex++;
+        if (stepIndex >= steps.length) {
+          sendBtn.disabled = true; input.disabled = true; input.placeholder = "End of scripted demo — hit Restart to run it again";
+          bookTriggerWrap.classList.add('show');
+        }
       });
     }
   }
