@@ -79,13 +79,52 @@ button{font-family:inherit; cursor:pointer; border:none;}
 }
 .note{font-size:12.5px; color:var(--ink-faint); margin-top:10px; line-height:1.5;}
 ::-webkit-scrollbar{width:8px;} ::-webkit-scrollbar-thumb{background:var(--line-strong); border-radius:8px;}
+
+/* ---------- booking flow ---------- */
+.book-trigger-wrap{padding:0 18px 18px; display:none;}
+.book-trigger-wrap.show{display:block;}
+#bookTriggerBtn{
+  width:100%; background:linear-gradient(135deg,var(--agent),var(--accent)); color:#04211D;
+  font-weight:700; padding:13px 18px; border-radius:12px; font-size:14.5px;
+  box-shadow:0 12px 28px -12px rgba(var(--agent-rgb),.6);
+}
+.booking{padding:0 18px 20px; border-top:1px solid var(--line); display:none;}
+.booking.show{display:block; padding-top:16px;}
+.booking-title{
+  font-family:"JetBrains Mono", monospace; font-size:11.5px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink-faint); margin:0 0 12px;
+}
+.slots{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;}
+.slot{
+  font-family:"JetBrains Mono", monospace; font-size:12.5px; padding:9px 15px;
+  border-radius:999px; border:1px solid var(--line-strong); background:var(--surface-2);
+  color:var(--ink-muted); cursor:pointer; transition:all .15s;
+}
+.slot.selected{background:rgba(var(--agent-rgb),.16); border-color:rgba(var(--agent-rgb),.55); color:var(--agent);}
+.book-fields{display:grid; gap:9px; margin-bottom:8px;}
+.book-fields input{
+  background:var(--bg-2); border:1px solid var(--line-strong); border-radius:10px;
+  color:var(--ink); padding:11px 13px; font-size:14px; font-family:inherit; width:100%;
+}
+.book-fields input:focus{outline:none; border-color:rgba(var(--agent-rgb),.6);}
+.book-warn{font-size:12.5px; color:var(--accent); margin:0 0 10px; display:none;}
+#confirmBookBtn{
+  background:linear-gradient(135deg,var(--agent),var(--accent)); color:#04211D;
+  font-weight:700; padding:11px 20px; border-radius:10px; font-size:14px;
+}
+.book-success{
+  display:none; background:rgba(var(--agent-rgb),.1); border:1px solid rgba(var(--agent-rgb),.3);
+  border-radius:var(--radius-m); padding:14px 16px; font-size:14px; line-height:1.5; color:var(--ink);
+}
+.book-success.show{display:block;}
+.book-note{font-size:11.5px; color:var(--ink-faint); margin:10px 0 0; line-height:1.4;}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="eyebrow"><span class="dot"></span> AIDECIDE ADD-ON &middot; AGENT DEMO</div>
   <h1>Vantage Recruit &amp; Vantage Advisor</h1>
-  <p class="sub">One agent engine, tuned for the two hardest sales conversations in direct sales: recruiting into an opportunity, and qualifying an insurance lead. Pick a persona, and reply as a real prospect would.</p>
+  <p class="sub">One agent engine, tuned for the two hardest sales conversations in direct sales: recruiting into an opportunity, and qualifying an insurance lead. Pick a persona, and reply as a real prospect would — this one closes and books, right in the chat.</p>
 
   <div class="tabs">
     <button class="tab active" data-persona="mlm">Vantage Recruit &middot; MLM / Network Marketing</button>
@@ -102,6 +141,24 @@ button{font-family:inherit; cursor:pointer; border:none;}
       <input id="msgInput" type="text" placeholder="Type anything a prospect might say, then hit Send..." />
       <button id="sendBtn">Send</button>
     </div>
+
+    <div class="book-trigger-wrap" id="bookTriggerWrap">
+      <button id="bookTriggerBtn">📅 Book your call &rarr;</button>
+    </div>
+
+    <div class="booking" id="bookingPanel">
+      <p class="booking-title">Pick a time</p>
+      <div class="slots" id="slotsWrap"></div>
+      <p class="book-warn" id="bookWarn">Pick a time and enter your name + email to confirm.</p>
+      <div class="book-fields">
+        <input id="bookName" type="text" placeholder="Your name" maxlength="80">
+        <input id="bookEmail" type="email" placeholder="Email" maxlength="120">
+        <input id="bookPhone" type="tel" placeholder="Phone (optional)" maxlength="40">
+      </div>
+      <button id="confirmBookBtn">Confirm booking</button>
+      <div class="book-success" id="bookSuccess"></div>
+      <p class="book-note">Confirming opens a pre-filled email to your sponsor/agent with the time and your info — hit send in that draft and you're locked in.</p>
+    </div>
   </div>
   <button class="restart" id="restartBtn">&#8635; Restart conversation</button>
   <p class="note">Demo runs a scripted example conversation for this walkthrough &mdash; the live version responds dynamically to whatever a real prospect says.</p>
@@ -117,9 +174,9 @@ button{font-family:inherit; cursor:pointer; border:none;}
         {user:"Kind of both honestly, but isn't this one of those pyramid scheme things?"},
         {agent:"Totally fair question — glad you asked instead of just scrolling past. A pyramid scheme has no real product and only pays you for recruiting. Here it's the opposite: you can just buy and use the products with zero obligation, and the income side only exists if people actually want the skincare, which they already do — I use it myself. Want me to break down what the time and money actually look like to start?"},
         {user:"Sure, how much does it cost and how much time would I need?"},
-        {agent:"Starter kit runs $99 and most people put in 3–5 hours a week around their normal job — no quitting anything, no inventory pressure. Everyone's results vary a lot depending on effort, which is exactly why the real conversation should happen with your actual sponsor, not me. Want me to get you on a quick call with her this week?"},
+        {agent:"Starter kit is normally $149, but I've got a founder's rate of $99 running through Friday, and most people only put in 3–5 hours a week around their normal job — no inventory, no quitting anything. I can lock in that founder's rate for you right now and get you on with your sponsor this week to map your first 30 days. Want me to grab you a spot?"},
         {user:"Yeah, let's do that."},
-        {agent:"Perfect — I'll pass your info to your sponsor now and she'll reach out today to find a time. Excited for you to hear the real story from someone living it!"}
+        {agent:"Love it — tap \"Book your call\" below, grab whichever time works, and I'll have your sponsor call you at that exact time with your $99 founder's rate already locked in."}
       ]
     },
     insurance: {
@@ -129,19 +186,35 @@ button{font-family:inherit; cursor:pointer; border:none;}
         {user:"Life insurance I think, but I already have some through my job."},
         {agent:"Good to know — employer life coverage is a great start, but it usually ends the day you leave that job and often only covers 1–2x your salary. A lot of people layer a small personal policy underneath so their family's protected either way. Mind if I ask roughly your age range and whether anyone depends on your income?"},
         {user:"I'm 34, married, one kid."},
-        {agent:"Got it — at 34 with a spouse and a child, most people in your situation look at a term life policy sized around 10–12x income, which tends to be very affordable at your age. I can't quote an exact rate myself, but I can get you on a short call with one of our licensed agents who'll pull real numbers for your situation — want me to set that up?"},
+        {agent:"Got it — for your profile, a 20-year term policy in the $500K–$750K range typically runs around $28–$35 a month if you're in decent health, and I can get you locked into this month's rate before the next pricing update hits. I'll get you on with one of our licensed agents today to finalize the exact number and get your family covered this week. Want me to grab you a time right now?"},
         {user:"Yeah that works, how much does something like that usually run though?"},
-        {agent:"It really depends on health, coverage amount and term length, so I don't want to guess and give you a number that's off — that's exactly what the licensed agent call is for. I'm booking you in now; you'll get a text to pick a time today or tomorrow."}
+        {agent:"Right around that $28–$35/month range for most people in your situation — the licensed agent will confirm the exact number off your health profile in the call itself. Tap \"Book your call\" below, pick whichever slot works best, and they'll call you at that time with your quote ready to sign."}
       ]
     }
   };
 
+  var SLOTS = ["Today 4:30 PM", "Tomorrow 10:00 AM", "Tomorrow 2:15 PM", "Thu 11:00 AM"];
+
   var current = 'mlm';
   var stepIndex = 0;
+  var selectedSlot = null;
   var transcriptEl = document.getElementById('transcript');
   var input = document.getElementById('msgInput');
   var sendBtn = document.getElementById('sendBtn');
   var label = document.getElementById('personaLabel');
+
+  var bookTriggerWrap = document.getElementById('bookTriggerWrap');
+  var bookTriggerBtn = document.getElementById('bookTriggerBtn');
+  var bookingPanel = document.getElementById('bookingPanel');
+  var slotsWrap = document.getElementById('slotsWrap');
+  var bookWarn = document.getElementById('bookWarn');
+  var bookFields = document.querySelector('.book-fields');
+  var bookName = document.getElementById('bookName');
+  var bookEmail = document.getElementById('bookEmail');
+  var bookPhone = document.getElementById('bookPhone');
+  var confirmBookBtn = document.getElementById('confirmBookBtn');
+  var bookSuccess = document.getElementById('bookSuccess');
+  var bookingTitle = document.querySelector('.booking-title');
 
   function bubble(role, text, cb){
     var b = document.createElement('div');
@@ -167,15 +240,82 @@ button{font-family:inherit; cursor:pointer; border:none;}
     setTimeout(function(){ t.remove(); next(); }, 900 + Math.random()*500);
   }
 
+  function renderSlots(){
+    slotsWrap.innerHTML = '';
+    selectedSlot = null;
+    SLOTS.forEach(function(s){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'slot';
+      b.textContent = s;
+      b.addEventListener('click', function(){
+        selectedSlot = s;
+        Array.prototype.forEach.call(slotsWrap.querySelectorAll('.slot'), function(el){ el.classList.remove('selected'); });
+        b.classList.add('selected');
+        bookWarn.style.display = 'none';
+      });
+      slotsWrap.appendChild(b);
+    });
+  }
+
+  function resetBooking(){
+    bookTriggerWrap.classList.remove('show');
+    bookTriggerBtn.style.display = '';
+    bookingPanel.classList.remove('show');
+    bookSuccess.classList.remove('show');
+    bookSuccess.textContent = '';
+    bookFields.style.display = '';
+    confirmBookBtn.style.display = '';
+    slotsWrap.style.display = '';
+    bookingTitle.style.display = '';
+    bookWarn.style.display = 'none';
+    bookName.value = ''; bookEmail.value = ''; bookPhone.value = '';
+    selectedSlot = null;
+  }
+
+  bookTriggerBtn.addEventListener('click', function(){
+    bookTriggerBtn.style.display = 'none';
+    renderSlots();
+    bookingPanel.classList.add('show');
+  });
+
+  confirmBookBtn.addEventListener('click', function(){
+    var name = (bookName.value || '').trim();
+    var email = (bookEmail.value || '').trim();
+    var phone = (bookPhone.value || '').trim();
+    if (!selectedSlot || !name || !email){
+      bookWarn.style.display = 'block';
+      return;
+    }
+    bookWarn.style.display = 'none';
+    var personaLabel = SCRIPTS[current].label;
+    var subject = 'New ' + personaLabel + ' lead — ' + name;
+    var body = 'Name: ' + name + '\nEmail: ' + email + (phone ? ('\nPhone: ' + phone) : '') +
+      '\nRequested time: ' + selectedSlot + '\nPersona: ' + personaLabel +
+      '\n\n(Lead captured from the Vantage ' + personaLabel + ' demo page.)';
+    var mailto = 'mailto:scott.tischler@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
+
+    bookFields.style.display = 'none';
+    confirmBookBtn.style.display = 'none';
+    slotsWrap.style.display = 'none';
+    bookingTitle.style.display = 'none';
+    bookSuccess.textContent = "You're set, " + name + " — locked in for " + selectedSlot + ". Check your email app: a message is drafted with your details, just hit send and you're booked.";
+    bookSuccess.classList.add('show');
+  });
+
   function playAgentStep(){
     var steps = SCRIPTS[current].steps;
-    if (stepIndex >= steps.length) { sendBtn.disabled = true; input.disabled = true; input.placeholder = "End of scripted demo — hit Restart to run it again"; return; }
+    if (stepIndex >= steps.length) {
+      sendBtn.disabled = true; input.disabled = true; input.placeholder = "End of scripted demo — hit Restart to run it again";
+      bookTriggerWrap.classList.add('show');
+      return;
+    }
     var step = steps[stepIndex];
     if (step.agent) {
       showThinking(function(){
         bubble('agent', step.agent);
         stepIndex++;
-        // if next step is also an agent line (shouldn't happen) keep going; otherwise wait for user
       });
     }
   }
@@ -186,6 +326,7 @@ button{font-family:inherit; cursor:pointer; border:none;}
     input.disabled = false;
     sendBtn.disabled = false;
     input.placeholder = "Type anything a prospect might say, then hit Send...";
+    resetBooking();
     playAgentStep();
   }
 
