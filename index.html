@@ -9,1105 +9,1105 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400..800&family=Fraunces:ital,wght@0,500;1,500;1,600&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    color-scheme:dark;
-    --bg:#07080B;
-    --bg-2:#0B0D12;
-    --surface:#12151C;
-    --surface-2:#191D26;
-    --surface-glass:rgba(255,255,255,0.035);
-    --line:rgba(255,255,255,0.09);
-    --line-strong:rgba(255,255,255,0.18);
-    --ink:#F4F6F8;
-    --ink-muted:#A7AFBD;
-    --ink-faint:#6B7280;
-    --accent:#FFB454;
-    --accent-ink:#241404;
-    --accent-soft:rgba(255,180,84,0.12);
-    --accent-rgb:255,180,84;
-    --agent:#34F2CE;
-    --agent-ink:#04211D;
-    --agent-soft:rgba(52,242,206,0.12);
-    --agent-rgb:52,242,206;
-    --danger:#FF7A6B;
-    --shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 24px 64px -28px rgba(0,0,0,.75);
-    --shadow-glow:0 0 0 1px rgba(var(--agent-rgb),.28), 0 28px 72px -24px rgba(var(--agent-rgb),.4);
-    --radius-s:8px;
-    --radius-m:14px;
-    --radius-l:22px;
-    --radius-xl:28px;
-  }
+:root{
+color-scheme:dark;
+--bg:#07080B;
+--bg-2:#0B0D12;
+--surface:#12151C;
+--surface-2:#191D26;
+--surface-glass:rgba(255,255,255,0.035);
+--line:rgba(255,255,255,0.09);
+--line-strong:rgba(255,255,255,0.18);
+--ink:#F4F6F8;
+--ink-muted:#A7AFBD;
+--ink-faint:#6B7280;
+--accent:#FFB454;
+--accent-ink:#241404;
+--accent-soft:rgba(255,180,84,0.12);
+--accent-rgb:255,180,84;
+--agent:#34F2CE;
+--agent-ink:#04211D;
+--agent-soft:rgba(52,242,206,0.12);
+--agent-rgb:52,242,206;
+--danger:#FF7A6B;
+--shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 24px 64px -28px rgba(0,0,0,.75);
+--shadow-glow:0 0 0 1px rgba(var(--agent-rgb),.28), 0 28px 72px -24px rgba(var(--agent-rgb),.4);
+--radius-s:8px;
+--radius-m:14px;
+--radius-l:22px;
+--radius-xl:28px;
+}
 
-  *{box-sizing:border-box;}
-  [hidden]{display:none !important;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
-  }
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Public Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    position:relative;
-  }
-  body::before{
-    content:"";
-    position:fixed;inset:0;z-index:0;pointer-events:none;
-    opacity:.5;mix-blend-mode:overlay;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
-  }
-  .wrap{max-width:1160px;margin:0 auto;padding-inline:24px;position:relative;z-index:1;}
-  h1,h2,h3{font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;text-wrap:balance;margin:0;color:var(--ink);}
-  .serif-i{font-family:'Fraunces', Georgia, serif;font-style:italic;font-weight:500;}
-  .mono{font-family:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;}
-  a{color:inherit;}
-  button{font-family:inherit;}
-  ::selection{background:rgba(var(--agent-rgb),.35);color:var(--ink);}
+*{box-sizing:border-box;}
+[hidden]{display:none !important;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+html{scroll-behavior:auto;}
+*{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
+body{
+margin:0;
+background:var(--bg);
+color:var(--ink);
+font-family:'Public Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+font-size:16px;
+line-height:1.6;
+-webkit-font-smoothing:antialiased;
+position:relative;
+}
+body::before{
+content:"";
+position:fixed;inset:0;z-index:0;pointer-events:none;
+opacity:.5;mix-blend-mode:overlay;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:24px;position:relative;z-index:1;}
+h1,h2,h3{font-family:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;text-wrap:balance;margin:0;color:var(--ink);}
+.serif-i{font-family:'Fraunces', Georgia, serif;font-style:italic;font-weight:500;}
+.mono{font-family:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;}
+a{color:inherit;}
+button{font-family:inherit;}
+::selection{background:rgba(var(--agent-rgb),.35);color:var(--ink);}
 
-  .grad-text{
-    background:linear-gradient(115deg, var(--agent), var(--accent) 85%);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
+.grad-text{
+background:linear-gradient(115deg, var(--agent), var(--accent) 85%);
+-webkit-background-clip:text;background-clip:text;color:transparent;
+}
 
-  .eyebrow{
-    font-family:'JetBrains Mono', ui-monospace, monospace;
-    font-size:12.5px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--agent);
-    font-weight:600;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin:0 0 16px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:7px;height:7px;border-radius:50%;
-    background:var(--agent);
-    box-shadow:0 0 0 3px var(--agent-soft), 0 0 14px -1px var(--agent);
-  }
+.eyebrow{
+font-family:'JetBrains Mono', ui-monospace, monospace;
+font-size:12.5px;
+letter-spacing:0.14em;
+text-transform:uppercase;
+color:var(--agent);
+font-weight:600;
+display:flex;
+align-items:center;
+gap:8px;
+margin:0 0 16px;
+}
+.eyebrow::before{
+content:"";
+width:7px;height:7px;border-radius:50%;
+background:var(--agent);
+box-shadow:0 0 0 3px var(--agent-soft), 0 0 14px -1px var(--agent);
+}
 
-  /* ---------- reveal-on-scroll ---------- */
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.16,.8,.3,1), transform .7s cubic-bezier(.16,.8,.3,1);}
-  .reveal.in{opacity:1;transform:none;}
-  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;}}
+/* ---------- reveal-on-scroll ---------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.16,.8,.3,1), transform .7s cubic-bezier(.16,.8,.3,1);}
+.reveal.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;}}
 
-  /* ---------- thinking dots ---------- */
-  .thinking{display:inline-flex;align-items:center;gap:4px;}
-  .thinking span{
-    width:5px;height:5px;border-radius:50%;background:var(--agent);
-    animation:think 1.1s ease-in-out infinite;
-  }
-  .thinking span:nth-child(2){animation-delay:.15s;}
-  .thinking span:nth-child(3){animation-delay:.3s;}
-  @keyframes think{0%,60%,100%{opacity:.25;transform:translateY(0);}30%{opacity:1;transform:translateY(-2px);}}
+/* ---------- thinking dots ---------- */
+.thinking{display:inline-flex;align-items:center;gap:4px;}
+.thinking span{
+width:5px;height:5px;border-radius:50%;background:var(--agent);
+animation:think 1.1s ease-in-out infinite;
+}
+.thinking span:nth-child(2){animation-delay:.15s;}
+.thinking span:nth-child(3){animation-delay:.3s;}
+@keyframes think{0%,60%,100%{opacity:.25;transform:translateY(0);}30%{opacity:1;transform:translateY(-2px);}}
 
-  /* ---------- nav ---------- */
-  .nav{
-    position:sticky;top:0;z-index:40;
-    background:rgba(7,8,11,0.72);
-    backdrop-filter:blur(14px) saturate(140%);
-    border-bottom:1px solid var(--line);
-  }
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;}
-  .logo{display:flex;align-items:baseline;gap:4px;font-family:'Bricolage Grotesque';font-weight:700;font-size:19px;letter-spacing:-0.01em;text-decoration:none;}
-  .logo .ext{font-family:'JetBrains Mono';font-weight:500;font-size:12px;color:var(--accent);}
-  .nav-links{display:none;align-items:center;gap:26px;}
-  .nav-links a{font-size:14.5px;font-weight:500;text-decoration:none;color:var(--ink-muted);white-space:nowrap;transition:color .15s ease;}
-  .nav-links a:hover{color:var(--ink);}
-  .nav-cta{display:none;}
-  @media (min-width:860px){.nav-links{display:flex;}}
-  @media (min-width:760px){.nav-cta{display:inline-flex;}}
+/* ---------- nav ---------- */
+.nav{
+position:sticky;top:0;z-index:40;
+background:rgba(7,8,11,0.72);
+backdrop-filter:blur(14px) saturate(140%);
+border-bottom:1px solid var(--line);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;}
+.logo{display:flex;align-items:baseline;gap:4px;font-family:'Bricolage Grotesque';font-weight:700;font-size:19px;letter-spacing:-0.01em;text-decoration:none;}
+.logo .ext{font-family:'JetBrains Mono';font-weight:500;font-size:12px;color:var(--accent);}
+.nav-links{display:none;align-items:center;gap:26px;}
+.nav-links a{font-size:14.5px;font-weight:500;text-decoration:none;color:var(--ink-muted);white-space:nowrap;transition:color .15s ease;}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{display:none;}
+@media (min-width:860px){.nav-links{display:flex;}}
+@media (min-width:760px){.nav-cta{display:inline-flex;}}
 
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    font-weight:600;font-size:14.5px;
-    padding:12px 22px;border-radius:999px;
-    border:1px solid transparent;
-    cursor:pointer;text-decoration:none;
-    transition:transform .18s cubic-bezier(.16,.8,.3,1), box-shadow .18s ease, background .18s ease, border-color .18s ease;
-    white-space:nowrap;
-  }
-  .btn:focus-visible{outline:2px solid var(--agent);outline-offset:2px;}
-  .btn-primary{
-    background:linear-gradient(120deg, var(--agent), var(--accent) 120%);
-    color:#07110F;font-weight:700;position:relative;overflow:hidden;
-    box-shadow:0 12px 30px -12px rgba(var(--agent-rgb),.55);
-  }
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(var(--agent-rgb),.7);}
-  .btn-primary::after{
-    content:"";position:absolute;inset:0;border-radius:inherit;
-    background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.4) 45%,transparent 60%);
-    transform:translateX(-120%);transition:transform .6s ease;
-  }
-  .btn-primary:hover::after{transform:translateX(120%);}
-  .btn-ghost{background:rgba(255,255,255,0.03);border-color:var(--line-strong);color:var(--ink);}
-  .btn-ghost:hover{background:rgba(255,255,255,0.07);border-color:rgba(var(--agent-rgb),.4);}
-  .btn-small{padding:9px 16px;font-size:13.5px;}
-  .btn[disabled]{opacity:.5;cursor:not-allowed;transform:none !important;box-shadow:none !important;}
+.btn{
+display:inline-flex;align-items:center;justify-content:center;gap:8px;
+font-weight:600;font-size:14.5px;
+padding:12px 22px;border-radius:999px;
+border:1px solid transparent;
+cursor:pointer;text-decoration:none;
+transition:transform .18s cubic-bezier(.16,.8,.3,1), box-shadow .18s ease, background .18s ease, border-color .18s ease;
+white-space:nowrap;
+}
+.btn:focus-visible{outline:2px solid var(--agent);outline-offset:2px;}
+.btn-primary{
+background:linear-gradient(120deg, var(--agent), var(--accent) 120%);
+color:#07110F;font-weight:700;position:relative;overflow:hidden;
+box-shadow:0 12px 30px -12px rgba(var(--agent-rgb),.55);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(var(--agent-rgb),.7);}
+.btn-primary::after{
+content:"";position:absolute;inset:0;border-radius:inherit;
+background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.4) 45%,transparent 60%);
+transform:translateX(-120%);transition:transform .6s ease;
+}
+.btn-primary:hover::after{transform:translateX(120%);}
+.btn-ghost{background:rgba(255,255,255,0.03);border-color:var(--line-strong);color:var(--ink);}
+.btn-ghost:hover{background:rgba(255,255,255,0.07);border-color:rgba(var(--agent-rgb),.4);}
+.btn-small{padding:9px 16px;font-size:13.5px;}
+.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none !important;box-shadow:none !important;}
 
-  /* ---------- hero ---------- */
-  .hero{padding-block:72px 88px;position:relative;overflow:hidden;isolation:isolate;}
-  .hero-aurora{
-    position:absolute;inset:-10% -10% auto -10%;height:130%;z-index:-2;pointer-events:none;
-    background:
-      radial-gradient(46rem 30rem at 14% 8%, rgba(var(--agent-rgb),.20), transparent 60%),
-      radial-gradient(38rem 28rem at 88% 2%, rgba(var(--accent-rgb),.16), transparent 60%),
-      radial-gradient(60rem 40rem at 50% 110%, rgba(var(--agent-rgb),.08), transparent 65%);
-    filter:blur(2px);
-  }
-  .hero-spotlight{
-    position:absolute;inset:0;z-index:-1;pointer-events:none;
-    background:radial-gradient(560px circle at var(--mx,50%) var(--my,20%), rgba(var(--agent-rgb),.10), transparent 60%);
-    transition:background .3s ease;
-  }
-  #heroCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.6;}
-  .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:44px;align-items:start;}
-  @media (min-width:900px){.hero-inner{grid-template-columns:1.05fr 1fr;gap:56px;}}
-  .agent-orb{
-    width:36px;height:36px;border-radius:50%;flex:none;position:relative;
-    background:radial-gradient(circle at 35% 30%, rgba(var(--agent-rgb),.95), rgba(var(--agent-rgb),.12) 70%);
-    box-shadow:0 0 0 1px rgba(var(--agent-rgb),.4), 0 0 28px -2px rgba(var(--agent-rgb),.85);
-  }
-  .agent-orb::after{
-    content:"";position:absolute;inset:9px;border-radius:50%;
-    background:rgba(var(--agent-rgb),.95);filter:blur(1px);
-    animation:orbpulse 2.6s ease-in-out infinite;
-  }
-  @keyframes orbpulse{0%,100%{opacity:.7;transform:scale(.85);}50%{opacity:1;transform:scale(1.12);}}
-  .hero-copy .eyebrow{font-size:13px;}
-  .hero-copy h1{font-size:clamp(36px,5vw,58px);line-height:1.03;font-weight:800;letter-spacing:-0.015em;margin-top:16px;}
-  .hero-copy h1 .serif-i{color:var(--agent);font-weight:500;}
-  .hero-copy .sub{font-size:19px;color:var(--ink-muted);max-width:36em;margin:22px 0 30px;}
-  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px;}
-  .proof-chips{display:flex;flex-wrap:wrap;gap:10px;}
-  .chip{
-    font-family:'JetBrains Mono';font-size:12px;font-weight:500;
-    border:1px solid var(--line);border-radius:999px;
-    padding:6px 12px;color:var(--ink-muted);background:rgba(255,255,255,.02);
-  }
+/* ---------- hero ---------- */
+.hero{padding-block:72px 88px;position:relative;overflow:hidden;isolation:isolate;}
+.hero-aurora{
+position:absolute;inset:-10% -10% auto -10%;height:130%;z-index:-2;pointer-events:none;
+background:
+radial-gradient(46rem 30rem at 14% 8%, rgba(var(--agent-rgb),.20), transparent 60%),
+radial-gradient(38rem 28rem at 88% 2%, rgba(var(--accent-rgb),.16), transparent 60%),
+radial-gradient(60rem 40rem at 50% 110%, rgba(var(--agent-rgb),.08), transparent 65%);
+filter:blur(2px);
+}
+.hero-spotlight{
+position:absolute;inset:0;z-index:-1;pointer-events:none;
+background:radial-gradient(560px circle at var(--mx,50%) var(--my,20%), rgba(var(--agent-rgb),.10), transparent 60%);
+transition:background .3s ease;
+}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.6;}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:44px;align-items:start;}
+@media (min-width:900px){.hero-inner{grid-template-columns:1.05fr 1fr;gap:56px;}}
+.agent-orb{
+width:36px;height:36px;border-radius:50%;flex:none;position:relative;
+background:radial-gradient(circle at 35% 30%, rgba(var(--agent-rgb),.95), rgba(var(--agent-rgb),.12) 70%);
+box-shadow:0 0 0 1px rgba(var(--agent-rgb),.4), 0 0 28px -2px rgba(var(--agent-rgb),.85);
+}
+.agent-orb::after{
+content:"";position:absolute;inset:9px;border-radius:50%;
+background:rgba(var(--agent-rgb),.95);filter:blur(1px);
+animation:orbpulse 2.6s ease-in-out infinite;
+}
+@keyframes orbpulse{0%,100%{opacity:.7;transform:scale(.85);}50%{opacity:1;transform:scale(1.12);}}
+.hero-copy .eyebrow{font-size:13px;}
+.hero-copy h1{font-size:clamp(36px,5vw,58px);line-height:1.03;font-weight:800;letter-spacing:-0.015em;margin-top:16px;}
+.hero-copy h1 .serif-i{color:var(--agent);font-weight:500;}
+.hero-copy .sub{font-size:19px;color:var(--ink-muted);max-width:36em;margin:22px 0 30px;}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px;}
+.proof-chips{display:flex;flex-wrap:wrap;gap:10px;}
+.chip{
+font-family:'JetBrains Mono';font-size:12px;font-weight:500;
+border:1px solid var(--line);border-radius:999px;
+padding:6px 12px;color:var(--ink-muted);background:rgba(255,255,255,.02);
+}
 
-  /* ---------- console (demo) ---------- */
-  .console{
-    background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
-    backdrop-filter:blur(20px);
-    border:1px solid var(--line-strong);
-    border-radius:var(--radius-xl);
-    box-shadow:var(--shadow);
-    overflow:hidden;
-    transition:box-shadow .4s ease, border-color .4s ease;
-  }
-  .console.is-live{
-    border-color:rgba(var(--agent-rgb),.55);
-    box-shadow:var(--shadow), var(--shadow-glow);
-  }
-  .console-top{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:14px 20px;border-bottom:1px solid var(--line);
-    background:rgba(255,255,255,.02);
-  }
-  .console-top .who{display:flex;align-items:center;gap:9px;font-family:'JetBrains Mono';font-size:12.5px;font-weight:600;letter-spacing:.04em;}
-  .live-dot{width:8px;height:8px;border-radius:50%;background:var(--agent);position:relative;flex:none;}
-  .live-dot::after{
-    content:"";position:absolute;inset:-4px;border-radius:50%;
-    border:1px solid var(--agent);opacity:.5;
-    animation:pulse 2.2s ease-out infinite;
-  }
-  @keyframes pulse{0%{transform:scale(.6);opacity:.6;}100%{transform:scale(2);opacity:0;}}
-  .console-top .tag{font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink-faint);}
-  .console-body{padding:20px;}
-  .transcript{display:flex;flex-direction:column;gap:12px;margin-bottom:16px;max-height:420px;overflow-y:auto;}
-  .badge-row{display:flex;justify-content:flex-end;margin-bottom:-2px;}
-  .badge{
-    font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
-    padding:3px 9px;border-radius:999px;font-weight:600;
-  }
-  .badge-example{background:rgba(255,255,255,.05);color:var(--ink-faint);border:1px solid var(--line);}
-  .badge-live{background:var(--agent-soft);color:var(--agent);}
-  .bubble{
-    max-width:88%;padding:12px 15px;border-radius:var(--radius-m);font-size:14.5px;line-height:1.55;
-  }
-  .bubble-agent{
-    align-self:flex-start;background:var(--agent-soft);color:var(--ink);
-    border:1px solid rgba(var(--agent-rgb),.3);
-    border-top-left-radius:4px;
-  }
-  .bubble-agent .who-label{display:block;font-family:'JetBrains Mono';font-size:10.5px;color:var(--agent);font-weight:700;letter-spacing:.06em;margin-bottom:4px;}
-  .bubble-user{
-    align-self:flex-end;background:rgba(255,255,255,.05);color:var(--ink);
-    border:1px solid var(--line);
-    border-top-right-radius:4px;
-  }
-  .bubble-user .who-label{display:block;font-family:'JetBrains Mono';font-size:10.5px;color:var(--ink-faint);font-weight:700;letter-spacing:.06em;margin-bottom:4px;}
-  .bubble-note{align-self:center;font-size:12.5px;color:var(--ink-faint);font-family:'JetBrains Mono';}
+/* ---------- console (demo) ---------- */
+.console{
+background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+backdrop-filter:blur(20px);
+border:1px solid var(--line-strong);
+border-radius:var(--radius-xl);
+box-shadow:var(--shadow);
+overflow:hidden;
+transition:box-shadow .4s ease, border-color .4s ease;
+}
+.console.is-live{
+border-color:rgba(var(--agent-rgb),.55);
+box-shadow:var(--shadow), var(--shadow-glow);
+}
+.console-top{
+display:flex;align-items:center;justify-content:space-between;
+padding:14px 20px;border-bottom:1px solid var(--line);
+background:rgba(255,255,255,.02);
+}
+.console-top .who{display:flex;align-items:center;gap:9px;font-family:'JetBrains Mono';font-size:12.5px;font-weight:600;letter-spacing:.04em;}
+.live-dot{width:8px;height:8px;border-radius:50%;background:var(--agent);position:relative;flex:none;}
+.live-dot::after{
+content:"";position:absolute;inset:-4px;border-radius:50%;
+border:1px solid var(--agent);opacity:.5;
+animation:pulse 2.2s ease-out infinite;
+}
+@keyframes pulse{0%{transform:scale(.6);opacity:.6;}100%{transform:scale(2);opacity:0;}}
+.console-top .tag{font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink-faint);}
+.console-body{padding:20px;}
+.transcript{display:flex;flex-direction:column;gap:12px;margin-bottom:16px;max-height:420px;overflow-y:auto;}
+.badge-row{display:flex;justify-content:flex-end;margin-bottom:-2px;}
+.badge{
+font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+padding:3px 9px;border-radius:999px;font-weight:600;
+}
+.badge-example{background:rgba(255,255,255,.05);color:var(--ink-faint);border:1px solid var(--line);}
+.badge-live{background:var(--agent-soft);color:var(--agent);}
+.bubble{
+max-width:88%;padding:12px 15px;border-radius:var(--radius-m);font-size:14.5px;line-height:1.55;
+}
+.bubble-agent{
+align-self:flex-start;background:var(--agent-soft);color:var(--ink);
+border:1px solid rgba(var(--agent-rgb),.3);
+border-top-left-radius:4px;
+}
+.bubble-agent .who-label{display:block;font-family:'JetBrains Mono';font-size:10.5px;color:var(--agent);font-weight:700;letter-spacing:.06em;margin-bottom:4px;}
+.bubble-user{
+align-self:flex-end;background:rgba(255,255,255,.05);color:var(--ink);
+border:1px solid var(--line);
+border-top-right-radius:4px;
+}
+.bubble-user .who-label{display:block;font-family:'JetBrains Mono';font-size:10.5px;color:var(--ink-faint);font-weight:700;letter-spacing:.06em;margin-bottom:4px;}
+.bubble-note{align-self:center;font-size:12.5px;color:var(--ink-faint);font-family:'JetBrains Mono';}
 
-  .setup{border-top:1px solid var(--line);padding-top:16px;}
-  .setup-label{font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px;}
-  .field{margin-bottom:10px;}
-  .field label{display:block;font-size:12.5px;font-weight:600;color:var(--ink-muted);margin-bottom:5px;}
-  .field input{
-    width:100%;padding:11px 13px;border-radius:var(--radius-s);
-    border:1px solid var(--line-strong);background:rgba(0,0,0,.25);color:var(--ink);
-    font-size:14px;font-family:inherit;
-  }
-  .field input:focus-visible{outline:2px solid var(--agent);outline-offset:1px;}
-  .setup-actions{display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap;}
-  .hint{font-size:12px;color:var(--ink-faint);}
-  .reply-row{display:flex;gap:8px;border-top:1px solid var(--line);padding-top:14px;margin-top:14px;}
-  .reply-row input{
-    flex:1;padding:11px 13px;border-radius:var(--radius-s);border:1px solid var(--line-strong);
-    background:rgba(0,0,0,.25);color:var(--ink);font-size:14px;font-family:inherit;
-  }
-  .reply-row input:focus-visible{outline:2px solid var(--agent);outline-offset:1px;}
-  .console-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap;}
-  .restart-link{font-size:12.5px;font-family:'JetBrains Mono';color:var(--ink-faint);background:none;border:none;cursor:pointer;text-decoration:underline;padding:0;}
-  .status-line{font-size:12.5px;color:var(--ink-faint);font-family:'JetBrains Mono';min-height:1.4em;}
-  .status-line.err{color:var(--danger);}
+.setup{border-top:1px solid var(--line);padding-top:16px;}
+.setup-label{font-family:'JetBrains Mono';font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px;}
+.field{margin-bottom:10px;}
+.field label{display:block;font-size:12.5px;font-weight:600;color:var(--ink-muted);margin-bottom:5px;}
+.field input{
+width:100%;padding:11px 13px;border-radius:var(--radius-s);
+border:1px solid var(--line-strong);background:rgba(0,0,0,.25);color:var(--ink);
+font-size:14px;font-family:inherit;
+}
+.field input:focus-visible{outline:2px solid var(--agent);outline-offset:1px;}
+.setup-actions{display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap;}
+.hint{font-size:12px;color:var(--ink-faint);}
+.reply-row{display:flex;gap:8px;border-top:1px solid var(--line);padding-top:14px;margin-top:14px;}
+.reply-row input{
+flex:1;padding:11px 13px;border-radius:var(--radius-s);border:1px solid var(--line-strong);
+background:rgba(0,0,0,.25);color:var(--ink);font-size:14px;font-family:inherit;
+}
+.reply-row input:focus-visible{outline:2px solid var(--agent);outline-offset:1px;}
+.console-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap;}
+.restart-link{font-size:12.5px;font-family:'JetBrains Mono';color:var(--ink-faint);background:none;border:none;cursor:pointer;text-decoration:underline;padding:0;}
+.status-line{font-size:12.5px;color:var(--ink-faint);font-family:'JetBrains Mono';min-height:1.4em;}
+.status-line.err{color:var(--danger);}
 
-  /* ---------- stats strip ---------- */
-  .stats-section{padding-block:0;position:relative;z-index:1;margin-top:-8px;}
-  .stats-strip{
-    display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
-    background:var(--line);border:1px solid var(--line);border-radius:var(--radius-l);
-    overflow:hidden;
-  }
-  @media (min-width:760px){.stats-strip{grid-template-columns:repeat(4,1fr);}}
-  .stat{background:var(--bg-2);padding:26px 22px;display:flex;flex-direction:column;gap:6px;}
-  .stat .num{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(26px,3vw,34px);letter-spacing:-0.01em;}
-  .stat .label{font-size:13px;color:var(--ink-muted);line-height:1.4;}
+/* ---------- stats strip ---------- */
+.stats-section{padding-block:0;position:relative;z-index:1;margin-top:-8px;}
+.stats-strip{
+display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+background:var(--line);border:1px solid var(--line);border-radius:var(--radius-l);
+overflow:hidden;
+}
+@media (min-width:760px){.stats-strip{grid-template-columns:repeat(4,1fr);}}
+.stat{background:var(--bg-2);padding:26px 22px;display:flex;flex-direction:column;gap:6px;}
+.stat .num{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(26px,3vw,34px);letter-spacing:-0.01em;}
+.stat .label{font-size:13px;color:var(--ink-muted);line-height:1.4;}
 
-  /* ---------- sections ---------- */
-  .section{padding-block:72px;border-top:1px solid var(--line);position:relative;z-index:1;}
-  .section-head{max-width:640px;margin-bottom:40px;}
-  .section-head h2{font-size:clamp(27px,3.4vw,38px);font-weight:700;line-height:1.12;}
-  .section-head p{color:var(--ink-muted);font-size:16.5px;margin:14px 0 0;}
+/* ---------- sections ---------- */
+.section{padding-block:72px;border-top:1px solid var(--line);position:relative;z-index:1;}
+.section-head{max-width:640px;margin-bottom:40px;}
+.section-head h2{font-size:clamp(27px,3.4vw,38px);font-weight:700;line-height:1.12;}
+.section-head p{color:var(--ink-muted);font-size:16.5px;margin:14px 0 0;}
 
-  /* evolution */
-  .evo-grid{display:grid;grid-template-columns:1fr;gap:16px;}
-  @media (min-width:760px){.evo-grid{grid-template-columns:repeat(3,1fr);}}
-  .evo-card{
-    background:var(--surface-glass);border:1px solid var(--line);border-radius:var(--radius-m);
-    padding:24px;display:flex;flex-direction:column;gap:12px;
-    transition:transform .3s cubic-bezier(.16,.8,.3,1), border-color .3s ease;
-  }
-  .evo-card:hover{transform:translateY(-4px);border-color:var(--line-strong);}
-  .evo-card.now{
-    border-color:rgba(var(--agent-rgb),.5);
-    background:linear-gradient(160deg, rgba(var(--agent-rgb),.08), var(--surface-glass) 60%);
-    box-shadow:0 0 0 1px rgba(var(--agent-rgb),.2), 0 24px 48px -28px rgba(var(--agent-rgb),.5);
-  }
-  .evo-tag{font-family:'JetBrains Mono';font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);}
-  .evo-card.now .evo-tag{color:var(--agent);}
-  .evo-card h3{font-size:19px;font-weight:700;}
-  .evo-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
-  .evo-card li{font-size:14px;color:var(--ink-muted);padding-left:18px;position:relative;}
-  .evo-card li::before{content:"–";position:absolute;left:0;color:var(--ink-faint);}
-  .evo-card.now li::before{content:"✓";color:var(--agent);}
+/* evolution */
+.evo-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+@media (min-width:760px){.evo-grid{grid-template-columns:repeat(3,1fr);}}
+.evo-card{
+background:var(--surface-glass);border:1px solid var(--line);border-radius:var(--radius-m);
+padding:24px;display:flex;flex-direction:column;gap:12px;
+transition:transform .3s cubic-bezier(.16,.8,.3,1), border-color .3s ease;
+}
+.evo-card:hover{transform:translateY(-4px);border-color:var(--line-strong);}
+.evo-card.now{
+border-color:rgba(var(--agent-rgb),.5);
+background:linear-gradient(160deg, rgba(var(--agent-rgb),.08), var(--surface-glass) 60%);
+box-shadow:0 0 0 1px rgba(var(--agent-rgb),.2), 0 24px 48px -28px rgba(var(--agent-rgb),.5);
+}
+.evo-tag{font-family:'JetBrains Mono';font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);}
+.evo-card.now .evo-tag{color:var(--agent);}
+.evo-card h3{font-size:19px;font-weight:700;}
+.evo-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
+.evo-card li{font-size:14px;color:var(--ink-muted);padding-left:18px;position:relative;}
+.evo-card li::before{content:"–";position:absolute;left:0;color:var(--ink-faint);}
+.evo-card.now li::before{content:"✓";color:var(--agent);}
 
-  /* pipeline */
-  .pipeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:2px;}
-  .pipeline::before{
-    content:"";position:absolute;left:21px;top:8px;bottom:8px;width:2px;
-    background:linear-gradient(180deg, rgba(var(--agent-rgb),.5), rgba(var(--agent-rgb),.05));
-  }
-  .stage{display:grid;grid-template-columns:44px 1fr;gap:20px;padding-block:22px;position:relative;}
-  .stage-num{
-    font-family:'JetBrains Mono';font-weight:700;font-size:14px;color:var(--agent-ink);
-    width:44px;height:44px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(135deg, var(--agent), var(--accent) 130%);
-    box-shadow:0 0 0 4px var(--bg), 0 0 22px -4px rgba(var(--agent-rgb),.7);
-    flex:none;position:relative;z-index:1;
-  }
-  .stage h3{font-size:18px;font-weight:700;margin-bottom:5px;}
-  .stage p{margin:0;color:var(--ink-muted);font-size:15px;max-width:52em;}
+/* pipeline */
+.pipeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:2px;}
+.pipeline::before{
+content:"";position:absolute;left:21px;top:8px;bottom:8px;width:2px;
+background:linear-gradient(180deg, rgba(var(--agent-rgb),.5), rgba(var(--agent-rgb),.05));
+}
+.stage{display:grid;grid-template-columns:44px 1fr;gap:20px;padding-block:22px;position:relative;}
+.stage-num{
+font-family:'JetBrains Mono';font-weight:700;font-size:14px;color:var(--agent-ink);
+width:44px;height:44px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+background:linear-gradient(135deg, var(--agent), var(--accent) 130%);
+box-shadow:0 0 0 4px var(--bg), 0 0 22px -4px rgba(var(--agent-rgb),.7);
+flex:none;position:relative;z-index:1;
+}
+.stage h3{font-size:18px;font-weight:700;margin-bottom:5px;}
+.stage p{margin:0;color:var(--ink-muted);font-size:15px;max-width:52em;}
 
-  /* ---------- agent ticker ---------- */
-  .ticker-section{padding-block:48px;border-top:1px solid var(--line);background:var(--bg-2);overflow:hidden;position:relative;z-index:1;}
-  .ticker-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
-  .ticker-head .eyebrow{margin:0;}
-  .ticker-head .note{font-size:12.5px;color:var(--ink-faint);font-family:'JetBrains Mono';}
-  .ticker{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
-  .ticker-track{display:flex;gap:14px;width:max-content;animation:ticker-scroll 34s linear infinite;}
-  .ticker:hover .ticker-track{animation-play-state:paused;}
-  @keyframes ticker-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  @media (prefers-reduced-motion: reduce){
-    .ticker-track{animation:none;}
-    .ticker{overflow-x:auto;}
-  }
-  .agent-card{
-    flex:none;width:284px;background:var(--surface);border:1px solid var(--line);
-    border-radius:var(--radius-m);padding:15px 17px;display:flex;flex-direction:column;gap:9px;
-    transition:border-color .2s ease;
-  }
-  .agent-card:hover{border-color:rgba(var(--agent-rgb),.4);}
-  .agent-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;}
-  .agent-card-vertical{font-family:'JetBrains Mono';font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em;}
-  .agent-card-dot{width:6px;height:6px;border-radius:50%;background:var(--agent);flex:none;box-shadow:0 0 0 3px var(--agent-soft);}
-  .agent-card p{margin:0;font-size:13.5px;color:var(--ink-muted);line-height:1.45;}
-  .agent-card-stage{font-family:'JetBrains Mono';font-size:10.5px;color:var(--agent);text-transform:uppercase;letter-spacing:.06em;}
+/* ---------- agent ticker ---------- */
+.ticker-section{padding-block:48px;border-top:1px solid var(--line);background:var(--bg-2);overflow:hidden;position:relative;z-index:1;}
+.ticker-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
+.ticker-head .eyebrow{margin:0;}
+.ticker-head .note{font-size:12.5px;color:var(--ink-faint);font-family:'JetBrains Mono';}
+.ticker{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
+.ticker-track{display:flex;gap:14px;width:max-content;animation:ticker-scroll 34s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+@keyframes ticker-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion: reduce){
+.ticker-track{animation:none;}
+.ticker{overflow-x:auto;}
+}
+.agent-card{
+flex:none;width:284px;background:var(--surface);border:1px solid var(--line);
+border-radius:var(--radius-m);padding:15px 17px;display:flex;flex-direction:column;gap:9px;
+transition:border-color .2s ease;
+}
+.agent-card:hover{border-color:rgba(var(--agent-rgb),.4);}
+.agent-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.agent-card-vertical{font-family:'JetBrains Mono';font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em;}
+.agent-card-dot{width:6px;height:6px;border-radius:50%;background:var(--agent);flex:none;box-shadow:0 0 0 3px var(--agent-soft);}
+.agent-card p{margin:0;font-size:13.5px;color:var(--ink-muted);line-height:1.45;}
+.agent-card-stage{font-family:'JetBrains Mono';font-size:10.5px;color:var(--agent);text-transform:uppercase;letter-spacing:.06em;}
 
-  /* pricing */
-  .pricing-grid{display:grid;grid-template-columns:1fr;gap:18px;}
-  @media (min-width:820px){.pricing-grid{grid-template-columns:repeat(3,1fr);}}
-  .price-card{
-    background:var(--surface-glass);border:1px solid var(--line);border-radius:var(--radius-l);
-    padding:28px;display:flex;flex-direction:column;gap:16px;
-    transition:transform .3s cubic-bezier(.16,.8,.3,1), border-color .3s ease;
-  }
-  .price-card:hover{transform:translateY(-4px);}
-  .price-card.featured{
-    border-color:rgba(var(--agent-rgb),.5);box-shadow:var(--shadow-glow);position:relative;
-    background:linear-gradient(165deg, rgba(var(--agent-rgb),.08), var(--surface-glass) 55%);
-  }
-  .featured-tag{
-    position:absolute;top:-12px;left:28px;
-    background:linear-gradient(120deg, var(--agent), var(--accent) 120%);color:#07110F;
-    font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-    padding:4px 12px;border-radius:999px;
-  }
-  .price-card h3{font-size:18px;font-weight:700;}
-  .price-card .tagline{font-size:13.5px;color:var(--ink-muted);min-height:2.6em;}
-  .price-amount{display:flex;align-items:baseline;gap:6px;}
-  .price-amount .num{font-family:'Bricolage Grotesque';font-size:34px;font-weight:800;}
-  .price-amount .per{font-size:13px;color:var(--ink-faint);}
-  .price-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;flex:1;}
-  .price-card li{font-size:14px;color:var(--ink-muted);padding-left:20px;position:relative;}
-  .price-card li::before{content:"✓";position:absolute;left:0;color:var(--agent);font-weight:700;}
+/* pricing */
+.pricing-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+@media (min-width:820px){.pricing-grid{grid-template-columns:repeat(3,1fr);}}
+.price-card{
+background:var(--surface-glass);border:1px solid var(--line);border-radius:var(--radius-l);
+padding:28px;display:flex;flex-direction:column;gap:16px;
+transition:transform .3s cubic-bezier(.16,.8,.3,1), border-color .3s ease;
+}
+.price-card:hover{transform:translateY(-4px);}
+.price-card.featured{
+border-color:rgba(var(--agent-rgb),.5);box-shadow:var(--shadow-glow);position:relative;
+background:linear-gradient(165deg, rgba(var(--agent-rgb),.08), var(--surface-glass) 55%);
+}
+.featured-tag{
+position:absolute;top:-12px;left:28px;
+background:linear-gradient(120deg, var(--agent), var(--accent) 120%);color:#07110F;
+font-family:'JetBrains Mono';font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+padding:4px 12px;border-radius:999px;
+}
+.price-card h3{font-size:18px;font-weight:700;}
+.price-card .tagline{font-size:13.5px;color:var(--ink-muted);min-height:2.6em;}
+.price-amount{display:flex;align-items:baseline;gap:6px;}
+.price-amount .num{font-family:'Bricolage Grotesque';font-size:34px;font-weight:800;}
+.price-amount .per{font-size:13px;color:var(--ink-faint);}
+.price-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;flex:1;}
+.price-card li{font-size:14px;color:var(--ink-muted);padding-left:20px;position:relative;}
+.price-card li::before{content:"✓";position:absolute;left:0;color:var(--agent);font-weight:700;}
 
-  .autonomy{display:flex;align-items:center;gap:10px;}
-  .autonomy svg{flex:none;}
-  .autonomy-label{font-family:'JetBrains Mono';font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em;}
-  .autonomy-label b{color:var(--ink);font-weight:700;}
+.autonomy{display:flex;align-items:center;gap:10px;}
+.autonomy svg{flex:none;}
+.autonomy-label{font-family:'JetBrains Mono';font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em;}
+.autonomy-label b{color:var(--ink);font-weight:700;}
 
-  .compare-strip{
-    margin-top:28px;border:1px solid var(--line);border-radius:var(--radius-m);
-    background:var(--surface-glass);overflow:hidden;
-  }
-  .compare-row{display:grid;grid-template-columns:1fr auto auto;gap:14px;padding:15px 18px;align-items:center;}
-  .compare-row:not(:last-child){border-bottom:1px solid var(--line);}
-  .compare-row.head{background:rgba(255,255,255,.03);}
-  .compare-row .metric{font-size:13.5px;color:var(--ink-muted);}
-  .compare-row .head-label{font-family:'JetBrains Mono';font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);}
-  .compare-row .them{font-family:'JetBrains Mono';font-size:13.5px;color:var(--ink-faint);text-align:right;min-width:9em;}
-  .compare-row .us{font-family:'JetBrains Mono';font-size:13.5px;color:var(--agent);text-align:right;font-weight:600;min-width:9em;}
-  @media (max-width:620px){
-    .compare-row{grid-template-columns:1fr;text-align:left;gap:4px;}
-    .compare-row .them,.compare-row .us{text-align:left;}
-  }
+.compare-strip{
+margin-top:28px;border:1px solid var(--line);border-radius:var(--radius-m);
+background:var(--surface-glass);overflow:hidden;
+}
+.compare-row{display:grid;grid-template-columns:1fr auto auto;gap:14px;padding:15px 18px;align-items:center;}
+.compare-row:not(:last-child){border-bottom:1px solid var(--line);}
+.compare-row.head{background:rgba(255,255,255,.03);}
+.compare-row .metric{font-size:13.5px;color:var(--ink-muted);}
+.compare-row .head-label{font-family:'JetBrains Mono';font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);}
+.compare-row .them{font-family:'JetBrains Mono';font-size:13.5px;color:var(--ink-faint);text-align:right;min-width:9em;}
+.compare-row .us{font-family:'JetBrains Mono';font-size:13.5px;color:var(--agent);text-align:right;font-weight:600;min-width:9em;}
+@media (max-width:620px){
+.compare-row{grid-template-columns:1fr;text-align:left;gap:4px;}
+.compare-row .them,.compare-row .us{text-align:left;}
+}
 
-  /* cta footer */
-  .cta-footer{
-    position:relative;overflow:hidden;
-    background:linear-gradient(165deg, rgba(var(--agent-rgb),.14), rgba(var(--accent-rgb),.08) 70%), var(--surface-2);
-    border:1px solid var(--line-strong);
-    border-radius:var(--radius-xl);
-    padding:52px 28px;text-align:center;margin-block:8px;
-  }
-  .cta-footer h2{font-size:clamp(25px,3vw,34px);margin-bottom:12px;}
-  .cta-footer p{color:var(--ink-muted);max-width:34em;margin:0 auto 24px;font-size:15.5px;}
-  .cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+/* cta footer */
+.cta-footer{
+position:relative;overflow:hidden;
+background:linear-gradient(165deg, rgba(var(--agent-rgb),.14), rgba(var(--accent-rgb),.08) 70%), var(--surface-2);
+border:1px solid var(--line-strong);
+border-radius:var(--radius-xl);
+padding:52px 28px;text-align:center;margin-block:8px;
+}
+.cta-footer h2{font-size:clamp(25px,3vw,34px);margin-bottom:12px;}
+.cta-footer p{color:var(--ink-muted);max-width:34em;margin:0 auto 24px;font-size:15.5px;}
+.cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
 
-  footer{padding:36px 0 52px;position:relative;z-index:1;}
-  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:var(--ink-faint);font-size:13px;}
-  footer .fine{font-family:'JetBrains Mono';font-size:11.5px;}
+footer{padding:36px 0 52px;position:relative;z-index:1;}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:var(--ink-faint);font-size:13px;}
+footer .fine{font-family:'JetBrains Mono';font-size:11.5px;}
 </style>
 </head>
 <body>
 <header class="nav">
-  <div class="wrap">
-    <a class="logo" href="#top"><span>aidecide</span><span class="ext">.tech</span></a>
-    <nav class="nav-links">
-      <a href="#evolution">Why agents</a>
-      <a href="#demo">Live demo</a>
-      <a href="#pipeline">How it works</a>
-      <a href="#pricing">Pricing</a>
-    </nav>
-    <a class="btn btn-primary btn-small nav-cta" href="#demo">Try live demo</a>
-  </div>
+<div class="wrap">
+<a class="logo" href="#top"><span>aidecide</span><span class="ext">.tech</span></a>
+<nav class="nav-links">
+<a href="#evolution">Why agents</a>
+<a href="#demo">Live demo</a>
+<a href="#pipeline">How it works</a>
+<a href="#pricing">Pricing</a>
+</nav>
+<a class="btn btn-primary btn-small nav-cta" href="#demo">Try live demo</a>
+</div>
 </header>
 
 <section class="hero" id="top">
-  <div class="hero-aurora" aria-hidden="true"></div>
-  <div class="hero-spotlight" id="heroSpotlight" aria-hidden="true"></div>
-  <canvas id="heroCanvas" aria-hidden="true"></canvas>
-  <div class="wrap hero-inner">
-    <div class="hero-copy">
-      <div style="display:flex;align-items:center;gap:14px;">
-        <span class="agent-orb" aria-hidden="true"></span>
-        <p class="eyebrow" style="margin:0;">A workforce of autonomous sales agents</p>
-      </div>
-      <h1>Your best closer, cloned into an agent that <span class="serif-i">never logs off</span>.</h1>
-      <p class="sub">Aidecide deploys AI agents that run the real sales conversation the second a prospect shows up — qualifying, presenting, handling objections, and closing — live and unscripted, instead of handing them a deck to click through alone.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#demo">Try the live agent ↓</a>
-        <a class="btn btn-ghost" href="#pricing">See pricing</a>
-      </div>
-      <div class="proof-chips">
-        <span class="chip">No rep required</span>
-        <span class="chip">Live in under a minute</span>
-        <span class="chip">Sells your pitch, not a script</span>
-      </div>
-    </div>
+<div class="hero-aurora" aria-hidden="true"></div>
+<div class="hero-spotlight" id="heroSpotlight" aria-hidden="true"></div>
+<canvas id="heroCanvas" aria-hidden="true"></canvas>
+<div class="wrap hero-inner">
+<div class="hero-copy">
+<div style="display:flex;align-items:center;gap:14px;">
+<span class="agent-orb" aria-hidden="true"></span>
+<p class="eyebrow" style="margin:0;">A workforce of autonomous sales agents</p>
+</div>
+<h1>Your best closer, cloned into an agent that <span class="serif-i">never logs off</span>.</h1>
+<p class="sub">Aidecide deploys AI agents that run the real sales conversation the second a prospect shows up — qualifying, presenting, handling objections, and closing — live and unscripted, instead of handing them a deck to click through alone.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="#demo">Try the live agent ↓</a>
+<a class="btn btn-ghost" href="#pricing">See pricing</a>
+</div>
+<div class="proof-chips">
+<span class="chip">No rep required</span>
+<span class="chip">Live in under a minute</span>
+<span class="chip">Sells your pitch, not a script</span>
+</div>
+</div>
 
-    <div class="console" id="demo">
-      <div class="console-top">
-        <div class="who"><span class="live-dot"></span><span id="consoleWho">VANTAGE — AGENT CONSOLE</span></div>
-        <span class="tag">aidecide.tech</span>
-      </div>
-      <div class="console-body">
-        <div class="badge-row"><span class="badge badge-example" id="transcriptBadge">Example</span></div>
-        <div class="transcript" id="transcript">
-          <div class="bubble bubble-agent">
-            <span class="who-label">Vantage · opening the conversation</span>
-            Hey — saw you run dispatch for a decent-sized HVAC fleet. Quick one: how many hours a week does your team burn re-routing techs when a job runs long or a truck breaks down?
-          </div>
-        </div>
+<div class="console" id="demo">
+<div class="console-top">
+<div class="who"><span class="live-dot"></span><span id="consoleWho">VANTAGE — AGENT CONSOLE</span></div>
+<span class="tag">aidecide.tech</span>
+</div>
+<div class="console-body">
+<div class="badge-row"><span class="badge badge-example" id="transcriptBadge">Example</span></div>
+<div class="transcript" id="transcript">
+<div class="bubble bubble-agent">
+<span class="who-label">Vantage · opening the conversation</span>
+Hey — saw you run dispatch for a decent-sized HVAC fleet. Quick one: how many hours a week does your team burn re-routing techs when a job runs long or a truck breaks down?
+</div>
+</div>
 
-        <div class="setup" id="setupPanel">
-          <p class="setup-label">Try it with your own business</p>
-          <div class="field">
-            <label for="bizInput">What do you sell?</label>
-            <input id="bizInput" type="text" value="Route optimization software for HVAC companies" maxlength="140">
-          </div>
-          <div class="field">
-            <label for="audienceInput">Who's it for?</label>
-            <input id="audienceInput" type="text" value="Owners of 10–40 truck HVAC companies" maxlength="140">
-          </div>
-          <div class="setup-actions">
-            <button class="btn btn-primary btn-small" id="launchBtn">Launch Vantage →</button>
-            <span class="hint">Opens the full live agent in a new tab, running on your own Claude session.</span>
-          </div>
-        </div>
+<div class="setup" id="setupPanel">
+<p class="setup-label">Try it with your own business</p>
+<div class="field">
+<label for="bizInput">What do you sell?</label>
+<input id="bizInput" type="text" value="Route optimization software for HVAC companies" maxlength="140">
+</div>
+<div class="field">
+<label for="audienceInput">Who's it for?</label>
+<input id="audienceInput" type="text" value="Owners of 10–40 truck HVAC companies" maxlength="140">
+</div>
+<div class="setup-actions">
+<button class="btn btn-primary btn-small" id="launchBtn">Launch Vantage →</button>
+<span class="hint">Opens the full live agent in a new tab.</span>
+</div>
+</div>
 
-        <div class="reply-row" id="replyPanel" hidden>
-          <input id="replyInput" type="text" placeholder="Reply as the prospect…" maxlength="300">
-          <button class="btn btn-primary btn-small" id="sendBtn">Send</button>
-        </div>
+<div class="reply-row" id="replyPanel" hidden>
+<input id="replyInput" type="text" placeholder="Reply as the prospect…" maxlength="300">
+<button class="btn btn-primary btn-small" id="sendBtn">Send</button>
+</div>
 
-        <div class="console-foot">
-          <div class="status-line" id="statusLine"></div>
-          <button class="restart-link" id="restartBtn" hidden>Restart demo</button>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="console-foot">
+<div class="status-line" id="statusLine"></div>
+<button class="restart-link" id="restartBtn" hidden>Restart demo</button>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="stats-section">
-  <div class="wrap">
-    <div class="stats-strip reveal">
-      <div class="stat">
-        <span class="num grad-text">&lt;60s</span>
-        <span class="label">From a shared link to a live, talking pitch</span>
-      </div>
-      <div class="stat">
-        <span class="num grad-text">24/7</span>
-        <span class="label">No scheduling, no time zones, no off hours</span>
-      </div>
-      <div class="stat">
-        <span class="num grad-text">5</span>
-        <span class="label">Sales moves it runs on every single conversation</span>
-      </div>
-      <div class="stat">
-        <span class="num grad-text">0</span>
-        <span class="label">Rep hours required to keep it running</span>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="stats-strip reveal">
+<div class="stat">
+<span class="num grad-text">&lt;60s</span>
+<span class="label">From a shared link to a live, talking pitch</span>
+</div>
+<div class="stat">
+<span class="num grad-text">24/7</span>
+<span class="label">No scheduling, no time zones, no off hours</span>
+</div>
+<div class="stat">
+<span class="num grad-text">5</span>
+<span class="label">Sales moves it runs on every single conversation</span>
+</div>
+<div class="stat">
+<span class="num grad-text">0</span>
+<span class="label">Rep hours required to keep it running</span>
+</div>
+</div>
+</div>
 </section>
 
 <section class="ticker-section">
-  <div class="wrap">
-    <div class="ticker-head">
-      <p class="eyebrow">Agents on shift right now</p>
-      <span class="note">Simulated preview — a sample of what's running across industries</span>
-    </div>
-  </div>
-  <div class="ticker">
-    <div class="ticker-track" id="tickerTrack"></div>
-  </div>
+<div class="wrap">
+<div class="ticker-head">
+<p class="eyebrow">Agents on shift right now</p>
+<span class="note">Simulated preview — a sample of what's running across industries</span>
+</div>
+</div>
+<div class="ticker">
+<div class="ticker-track" id="tickerTrack"></div>
+</div>
 </section>
 
 <section class="section" id="evolution">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>From a deck someone clicks through, to an agent that talks back</h2>
-      <p>Interactive presentations were the upgrade from static slides. Autonomous agents are the next one — the pitch stops being something a prospect navigates alone.</p>
-    </div>
-    <div class="evo-grid">
-      <div class="evo-card reveal">
-        <span class="evo-tag">Then</span>
-        <h3>Static deck</h3>
-        <ul>
-          <li>Same 30 slides for every prospect</li>
-          <li>No idea if they read past slide 4</li>
-          <li>Objections wait for the next call</li>
-          <li>A rep has to be in the room to close</li>
-        </ul>
-      </div>
-      <div class="evo-card reveal">
-        <span class="evo-tag">Better</span>
-        <h3>Interactive presentation</h3>
-        <ul>
-          <li>Personalized name, logo, and pricing</li>
-          <li>Prospect clicks through their own path</li>
-          <li>Real-time view and engagement tracking</li>
-          <li>Still can't answer a question or object</li>
-        </ul>
-      </div>
-      <div class="evo-card now reveal">
-        <span class="evo-tag">Aidecide</span>
-        <h3>Autonomous agent</h3>
-        <ul>
-          <li>Opens with a hook built for this prospect</li>
-          <li>Asks the questions your best rep asks</li>
-          <li>Handles objections with your real answers</li>
-          <li>Books the call or closes — no rep needed</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head reveal">
+<h2>From a deck someone clicks through, to an agent that talks back</h2>
+<p>Interactive presentations were the upgrade from static slides. Autonomous agents are the next one — the pitch stops being something a prospect navigates alone.</p>
+</div>
+<div class="evo-grid">
+<div class="evo-card reveal">
+<span class="evo-tag">Then</span>
+<h3>Static deck</h3>
+<ul>
+<li>Same 30 slides for every prospect</li>
+<li>No idea if they read past slide 4</li>
+<li>Objections wait for the next call</li>
+<li>A rep has to be in the room to close</li>
+</ul>
+</div>
+<div class="evo-card reveal">
+<span class="evo-tag">Better</span>
+<h3>Interactive presentation</h3>
+<ul>
+<li>Personalized name, logo, and pricing</li>
+<li>Prospect clicks through their own path</li>
+<li>Real-time view and engagement tracking</li>
+<li>Still can't answer a question or object</li>
+</ul>
+</div>
+<div class="evo-card now reveal">
+<span class="evo-tag">Aidecide</span>
+<h3>Autonomous agent</h3>
+<ul>
+<li>Opens with a hook built for this prospect</li>
+<li>Asks the questions your best rep asks</li>
+<li>Handles objections with your real answers</li>
+<li>Books the call or closes — no rep needed</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 
 <section class="section" id="pipeline">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>What Vantage actually does on every conversation</h2>
-      <p>The same five moves, every time — the ones your best closer already makes, run by an agent that never has an off day.</p>
-    </div>
-    <div class="pipeline">
-      <div class="stage reveal">
-        <div class="stage-num mono">01</div>
-        <div><h3>Engage</h3><p>The agent responds the instant a prospect shows up, opening with a hook pulled from what they sell to and who they are — not a generic greeting.</p></div>
-      </div>
-      <div class="stage reveal">
-        <div class="stage-num mono">02</div>
-        <div><h3>Qualify</h3><p>It asks the three to five questions your reps always ask, and scores fit and intent as the answers come in — live, not after the call.</p></div>
-      </div>
-      <div class="stage reveal">
-        <div class="stage-num mono">03</div>
-        <div><h3>Present</h3><p>It pulls only the proof points, pricing, and use cases that match what this prospect just told it — never the full deck, never in the wrong order.</p></div>
-      </div>
-      <div class="stage reveal">
-        <div class="stage-num mono">04</div>
-        <div><h3>Handle objections</h3><p>Pushback gets met with your actual rebuttals, trained from your own call transcripts — and escalated to a human the moment it should be.</p></div>
-      </div>
-      <div class="stage reveal">
-        <div class="stage-num mono">05</div>
-        <div><h3>Close</h3><p>It books the call, sends the contract, or hands a hot lead to a rep with the full transcript attached — the moment the prospect is ready.</p></div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head reveal">
+<h2>What Vantage actually does on every conversation</h2>
+<p>The same five moves, every time — the ones your best closer already makes, run by an agent that never has an off day.</p>
+</div>
+<div class="pipeline">
+<div class="stage reveal">
+<div class="stage-num mono">01</div>
+<div><h3>Engage</h3><p>The agent responds the instant a prospect shows up, opening with a hook pulled from what they sell to and who they are — not a generic greeting.</p></div>
+</div>
+<div class="stage reveal">
+<div class="stage-num mono">02</div>
+<div><h3>Qualify</h3><p>It asks the three to five questions your reps always ask, and scores fit and intent as the answers come in — live, not after the call.</p></div>
+</div>
+<div class="stage reveal">
+<div class="stage-num mono">03</div>
+<div><h3>Present</h3><p>It pulls only the proof points, pricing, and use cases that match what this prospect just told it — never the full deck, never in the wrong order.</p></div>
+</div>
+<div class="stage reveal">
+<div class="stage-num mono">04</div>
+<div><h3>Handle objections</h3><p>Pushback gets met with your actual rebuttals, trained from your own call transcripts — and escalated to a human the moment it should be.</p></div>
+</div>
+<div class="stage reveal">
+<div class="stage-num mono">05</div>
+<div><h3>Close</h3><p>It books the call, sends the contract, or hands a hot lead to a rep with the full transcript attached — the moment the prospect is ready.</p></div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="section" id="pricing">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Priced to beat the interactive deck you're comparing us to</h2>
-      <p>iDecide charges up to $7,499 up front, plus a 100-rep minimum, before an Elite prospect ever talks to a "presentation." Every aidecide tier is a monthly agent, no buy-in, no minimums.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="price-card reveal">
-        <h3>Agent Starter</h3>
-        <p class="tagline">Less than iDecide's Pro builder plan — for an agent that runs the conversation instead of a template you build yourself.</p>
-        <div class="price-amount"><span class="num mono">$49</span><span class="per">/mo</span></div>
-        <div class="autonomy">
-          <svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
-            <circle cx="20" cy="20" r="16" fill="none" stroke="var(--line)" stroke-width="4"/>
-            <circle cx="20" cy="20" r="16" fill="none" stroke="var(--agent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="65.3" transform="rotate(-90 20 20)"/>
-          </svg>
-          <span class="autonomy-label"><b>35%</b> autonomous</span>
-        </div>
-        <ul>
-          <li>1 trained agent on your website chat</li>
-          <li>Built from your existing scripts, decks and FAQs</li>
-          <li>Qualifies and hands off hot leads to a human</li>
-          <li>Up to 500 conversations / mo</li>
-          <li>Email support</li>
-        </ul>
-        <a class="btn btn-ghost" href="#demo">Try it on the demo</a>
-      </div>
-      <div class="price-card featured reveal">
-        <span class="featured-tag">Most teams start here</span>
-        <h3>Agent Pro</h3>
-        <p class="tagline">Less than three months of iDecide's Elite buy-in — no minimums, cancel anytime.</p>
-        <div class="price-amount"><span class="num mono">$199</span><span class="per">/mo</span></div>
-        <div class="autonomy">
-          <svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
-            <circle cx="20" cy="20" r="16" fill="none" stroke="var(--line)" stroke-width="4"/>
-            <circle cx="20" cy="20" r="16" fill="none" stroke="var(--agent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="25.1" transform="rotate(-90 20 20)"/>
-          </svg>
-          <span class="autonomy-label"><b>75%</b> autonomous</span>
-        </div>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Full objection-handling and closing logic</li>
-          <li>Deploys on web chat, SMS and outbound email</li>
-          <li>Live analytics on every drop-off point</li>
-          <li>Up to 5,000 conversations / mo</li>
-          <li>Priority support</li>
-        </ul>
-        <a class="btn btn-primary" href="#demo">Try it on the demo</a>
-      </div>
-      <div class="price-card reveal">
-        <h3>Agent Elite</h3>
-        <p class="tagline">iDecide Elite needs $7,499 down and 100 reps minimum. Ours doesn't need either.</p>
-        <div class="price-amount"><span class="num mono">$699</span><span class="per">/mo</span></div>
-        <div class="autonomy">
-          <svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
-            <circle cx="20" cy="20" r="16" fill="none" stroke="var(--line)" stroke-width="4"/>
-            <circle cx="20" cy="20" r="16" fill="none" stroke="var(--agent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="0" transform="rotate(-90 20 20)"/>
-          </svg>
-          <span class="autonomy-label"><b>100%</b> autonomous</span>
-        </div>
-        <ul>
-          <li>Everything in Pro</li>
-          <li>Our team designs, trains and tunes your agent</li>
-          <li>Voice agent for phone-based selling</li>
-          <li>Ongoing optimization from real conversation data</li>
-          <li>Dedicated strategist, 24/7 support</li>
-        </ul>
-        <a class="btn btn-ghost" href="mailto:scott.tischler@gmail.com?subject=Agent%20Elite%20—%20aidecide.tech">Talk to us</a>
-      </div>
-    </div>
+<div class="wrap">
+<div class="section-head reveal">
+<h2>Priced to beat the interactive deck you're comparing us to</h2>
+<p>iDecide charges up to $7,499 up front, plus a 100-rep minimum, before an Elite prospect ever talks to a "presentation." Every aidecide tier is a monthly agent, no buy-in, no minimums.</p>
+</div>
+<div class="pricing-grid">
+<div class="price-card reveal">
+<h3>Agent Starter</h3>
+<p class="tagline">Less than iDecide's Pro builder plan — for an agent that runs the conversation instead of a template you build yourself.</p>
+<div class="price-amount"><span class="num mono">$49</span><span class="per">/mo</span></div>
+<div class="autonomy">
+<svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
+<circle cx="20" cy="20" r="16" fill="none" stroke="var(--line)" stroke-width="4"/>
+<circle cx="20" cy="20" r="16" fill="none" stroke="var(--agent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="65.3" transform="rotate(-90 20 20)"/>
+</svg>
+<span class="autonomy-label"><b>35%</b> autonomous</span>
+</div>
+<ul>
+<li>1 trained agent on your website chat</li>
+<li>Built from your existing scripts, decks and FAQs</li>
+<li>Qualifies and hands off hot leads to a human</li>
+<li>Up to 500 conversations / mo</li>
+<li>Email support</li>
+</ul>
+<a class="btn btn-ghost" href="#demo">Try it on the demo</a>
+</div>
+<div class="price-card featured reveal">
+<span class="featured-tag">Most teams start here</span>
+<h3>Agent Pro</h3>
+<p class="tagline">Less than three months of iDecide's Elite buy-in — no minimums, cancel anytime.</p>
+<div class="price-amount"><span class="num mono">$199</span><span class="per">/mo</span></div>
+<div class="autonomy">
+<svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
+<circle cx="20" cy="20" r="16" fill="none" stroke="var(--line)" stroke-width="4"/>
+<circle cx="20" cy="20" r="16" fill="none" stroke="var(--agent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="25.1" transform="rotate(-90 20 20)"/>
+</svg>
+<span class="autonomy-label"><b>75%</b> autonomous</span>
+</div>
+<ul>
+<li>Everything in Starter</li>
+<li>Full objection-handling and closing logic</li>
+<li>Deploys on web chat, SMS and outbound email</li>
+<li>Live analytics on every drop-off point</li>
+<li>Up to 5,000 conversations / mo</li>
+<li>Priority support</li>
+</ul>
+<a class="btn btn-primary" href="#demo">Try it on the demo</a>
+</div>
+<div class="price-card reveal">
+<h3>Agent Elite</h3>
+<p class="tagline">iDecide Elite needs $7,499 down and 100 reps minimum. Ours doesn't need either.</p>
+<div class="price-amount"><span class="num mono">$699</span><span class="per">/mo</span></div>
+<div class="autonomy">
+<svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
+<circle cx="20" cy="20" r="16" fill="none" stroke="var(--line)" stroke-width="4"/>
+<circle cx="20" cy="20" r="16" fill="none" stroke="var(--agent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="0" transform="rotate(-90 20 20)"/>
+</svg>
+<span class="autonomy-label"><b>100%</b> autonomous</span>
+</div>
+<ul>
+<li>Everything in Pro</li>
+<li>Our team designs, trains and tunes your agent</li>
+<li>Voice agent for phone-based selling</li>
+<li>Ongoing optimization from real conversation data</li>
+<li>Dedicated strategist, 24/7 support</li>
+</ul>
+<a class="btn btn-ghost" href="mailto:scott.tischler@gmail.com?subject=Agent%20Elite%20—%20aidecide.tech">Talk to us</a>
+</div>
+</div>
 
-    <div class="compare-strip reveal">
-      <div class="compare-row head">
-        <span class="head-label">How the buy-in compares</span>
-        <span class="head-label">iDecide</span>
-        <span class="head-label">Aidecide</span>
-      </div>
-      <div class="compare-row">
-        <span class="metric">Entry plan</span>
-        <span class="them">$16.50/mo</span>
-        <span class="us">$49/mo</span>
-      </div>
-      <div class="compare-row">
-        <span class="metric">Builder / mid tier</span>
-        <span class="them">$83/mo</span>
-        <span class="us">$199/mo</span>
-      </div>
-      <div class="compare-row">
-        <span class="metric">Done-for-you tier</span>
-        <span class="them">$7,499 one-time + 100-rep minimum</span>
-        <span class="us">$699/mo, no minimum</span>
-      </div>
-    </div>
-    <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;">iDecide figures from idecide.com/pricing, public as of this write-up. Ours are a starting draft — happy to tune with you.</p>
-  </div>
+<div class="compare-strip reveal">
+<div class="compare-row head">
+<span class="head-label">How the buy-in compares</span>
+<span class="head-label">iDecide</span>
+<span class="head-label">Aidecide</span>
+</div>
+<div class="compare-row">
+<span class="metric">Entry plan</span>
+<span class="them">$16.50/mo</span>
+<span class="us">$49/mo</span>
+</div>
+<div class="compare-row">
+<span class="metric">Builder / mid tier</span>
+<span class="them">$83/mo</span>
+<span class="us">$199/mo</span>
+</div>
+<div class="compare-row">
+<span class="metric">Done-for-you tier</span>
+<span class="them">$7,499 one-time + 100-rep minimum</span>
+<span class="us">$699/mo, no minimum</span>
+</div>
+</div>
+<p style="font-size:12px;color:var(--ink-faint);margin-top:10px;">iDecide figures from idecide.com/pricing, public as of this write-up. Ours are a starting draft — happy to tune with you.</p>
+</div>
 </section>
 
 <section class="section" style="border-top:none;padding-top:0;">
-  <div class="wrap">
-    <div class="cta-footer reveal">
-      <h2>Ready to let an agent run your next conversation?</h2>
-      <p>aidecide.tech is in build — try the live agent above with your own pitch, then email us and we'll get you set up.</p>
-      <div class="cta-actions">
-        <a class="btn btn-primary" href="mailto:scott.tischler@gmail.com?subject=Early%20access%20—%20aidecide.tech">Email us for early access</a>
-        <a class="btn btn-ghost" href="#demo">Back to the live demo ↑</a>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="cta-footer reveal">
+<h2>Ready to let an agent run your next conversation?</h2>
+<p>aidecide.tech is in build — try the live agent above with your own pitch, then email us and we'll get you set up.</p>
+<div class="cta-actions">
+<a class="btn btn-primary" href="mailto:scott.tischler@gmail.com?subject=Early%20access%20—%20aidecide.tech">Email us for early access</a>
+<a class="btn btn-ghost" href="#demo">Back to the live demo ↑</a>
+</div>
+</div>
+</div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <span class="logo" style="font-size:15px;"><span>aidecide</span><span class="ext">.tech</span></span>
-    <span class="fine">Concept build · the demo above runs on your own Claude session, nothing is stored.</span>
-  </div>
+<div class="wrap">
+<span class="logo" style="font-size:15px;"><span>aidecide</span><span class="ext">.tech</span></span>
+<span class="fine">Concept build · the demo above runs live, nothing is stored.</span>
+</div>
 </footer>
 
 <script>
 (function(){
-  "use strict";
+"use strict";
 
-  var els = {
-    console: document.getElementById('demo'),
-    transcript: document.getElementById('transcript'),
-    badge: document.getElementById('transcriptBadge'),
-    setupPanel: document.getElementById('setupPanel'),
-    replyPanel: document.getElementById('replyPanel'),
-    bizInput: document.getElementById('bizInput'),
-    audienceInput: document.getElementById('audienceInput'),
-    launchBtn: document.getElementById('launchBtn'),
-    replyInput: document.getElementById('replyInput'),
-    sendBtn: document.getElementById('sendBtn'),
-    statusLine: document.getElementById('statusLine'),
-    restartBtn: document.getElementById('restartBtn'),
-    consoleWho: document.getElementById('consoleWho')
-  };
+var els = {
+console: document.getElementById('demo'),
+transcript: document.getElementById('transcript'),
+badge: document.getElementById('transcriptBadge'),
+setupPanel: document.getElementById('setupPanel'),
+replyPanel: document.getElementById('replyPanel'),
+bizInput: document.getElementById('bizInput'),
+audienceInput: document.getElementById('audienceInput'),
+launchBtn: document.getElementById('launchBtn'),
+replyInput: document.getElementById('replyInput'),
+sendBtn: document.getElementById('sendBtn'),
+statusLine: document.getElementById('statusLine'),
+restartBtn: document.getElementById('restartBtn'),
+consoleWho: document.getElementById('consoleWho')
+};
 
-  var instructionsTurn = null;  // {role:'user', content} kept forever as turn 0
-  var turns = [];               // full array sent to sample(), starting with instructionsTurn
-  var controller = null;
-  var busy = false;
+var instructionsTurn = null; // {role:'user', content} kept forever as turn 0
+var turns = []; // full array sent to sample(), starting with instructionsTurn
+var controller = null;
+var busy = false;
 
-  var ERROR_COPY = {
-    not_granted: "This session hasn't allowed Vantage to run here.",
-    sampling_disabled: "Live agents aren't available for this account right now.",
-    not_declared: "This page lost its live-agent permission — refresh to try again.",
-    capability_disabled: "Vantage can't run in this view right now.",
-    capability_removed: "This viewer app is too old to run the live demo.",
-    rate_limited: "Vantage is getting a lot of tries right now — wait a moment and send again.",
-    session_expired: "Your session timed out — refresh and try again.",
-    refused: "Vantage didn't want to continue down that path — try rephrasing.",
-    empty_completion: "Vantage didn't say anything back — try sending that again.",
-    upstream_error: "Something glitched on the way to Vantage — try again.",
-    invalid_request: "That reply couldn't be sent — try shortening it.",
-    prompt_too_large: "That conversation got long — hit restart to start a fresh one."
-  };
+var ERROR_COPY = {
+not_granted: "This session hasn't allowed Vantage to run here.",
+sampling_disabled: "Live agents aren't available for this account right now.",
+not_declared: "This page lost its live-agent permission — refresh to try again.",
+capability_disabled: "Vantage can't run in this view right now.",
+capability_removed: "This viewer app is too old to run the live demo.",
+rate_limited: "Vantage is getting a lot of tries right now — wait a moment and send again.",
+session_expired: "Your session timed out — refresh and try again.",
+refused: "Vantage didn't want to continue down that path — try rephrasing.",
+empty_completion: "Vantage didn't say anything back — try sending that again.",
+upstream_error: "Something glitched on the way to Vantage — try again.",
+invalid_request: "That reply couldn't be sent — try shortening it.",
+prompt_too_large: "That conversation got long — hit restart to start a fresh one."
+};
 
-  function setStatus(msg, isErr){
-    els.statusLine.textContent = msg || '';
-    els.statusLine.classList.toggle('err', !!isErr);
-  }
+function setStatus(msg, isErr){
+els.statusLine.textContent = msg || '';
+els.statusLine.classList.toggle('err', !!isErr);
+}
 
-  function setThinking(label){
-    els.statusLine.classList.remove('err');
-    els.statusLine.innerHTML = '';
-    var wrap = document.createElement('span');
-    wrap.className = 'thinking';
-    var txt = document.createTextNode(label + ' ');
-    wrap.appendChild(txt);
-    for (var i=0;i<3;i++){
-      var d = document.createElement('span');
-      wrap.appendChild(d);
-    }
-    els.statusLine.appendChild(wrap);
-  }
+function setThinking(label){
+els.statusLine.classList.remove('err');
+els.statusLine.innerHTML = '';
+var wrap = document.createElement('span');
+wrap.className = 'thinking';
+var txt = document.createTextNode(label + ' ');
+wrap.appendChild(txt);
+for (var i=0;i<3;i++){
+var d = document.createElement('span');
+wrap.appendChild(d);
+}
+els.statusLine.appendChild(wrap);
+}
 
-  function bubble(role, label, text){
-    var b = document.createElement('div');
-    b.className = 'bubble ' + (role === 'agent' ? 'bubble-agent' : 'bubble-user');
-    var l = document.createElement('span');
-    l.className = 'who-label';
-    l.textContent = label;
-    var t = document.createElement('span');
-    t.className = 'bubble-text';
-    t.textContent = text || '';
-    b.appendChild(l);
-    b.appendChild(t);
-    els.transcript.appendChild(b);
-    els.transcript.scrollTop = els.transcript.scrollHeight;
-    return t;
-  }
+function bubble(role, label, text){
+var b = document.createElement('div');
+b.className = 'bubble ' + (role === 'agent' ? 'bubble-agent' : 'bubble-user');
+var l = document.createElement('span');
+l.className = 'who-label';
+l.textContent = label;
+var t = document.createElement('span');
+t.className = 'bubble-text';
+t.textContent = text || '';
+b.appendChild(l);
+b.appendChild(t);
+els.transcript.appendChild(b);
+els.transcript.scrollTop = els.transcript.scrollHeight;
+return t;
+}
 
-  function clearTranscript(){
-    els.transcript.innerHTML = '';
-  }
+function clearTranscript(){
+els.transcript.innerHTML = '';
+}
 
-  function setBusy(v){
-    busy = v;
-    els.launchBtn.disabled = v;
-    els.sendBtn.disabled = v;
-    els.replyInput.disabled = v;
-  }
+function setBusy(v){
+busy = v;
+els.launchBtn.disabled = v;
+els.sendBtn.disabled = v;
+els.replyInput.disabled = v;
+}
 
-  function buildInstructions(biz, audience){
-    return {
-      role: 'user',
-      content:
-        "You are Vantage, an autonomous AI sales agent built by aidecide.tech, currently running live inside a demo on the aidecide.tech website. " +
-        "The person you're talking to is a visitor testing what you'd sound like deployed for their own business, but you should stay fully in character as if they were a real, brand-new prospect who just landed on this business's site — that's the whole point of the demo. " +
-        "Business you are selling: " + biz + ". " +
-        "Who you're selling to: " + audience + ". " +
-        "Open the conversation now: hook them with something specific to what this business sells, then ask one sharp qualifying question, and stop there. " +
-        "For every message after your opening, keep playing Vantage against whatever the visitor says next as the prospect: qualify them, present only what's relevant, handle objections with confidence, and work toward booking a next step or closing. " +
-        "Rules: 2 to 4 short sentences per reply, confident and conversational like a sharp human rep, never robotic, never mention this is a demo or that you are an AI, no markdown, no bullet points, no headers — just talk."
-    };
-  }
+function buildInstructions(biz, audience){
+return {
+role: 'user',
+content:
+"You are Vantage, an autonomous AI sales agent built by aidecide.tech, currently running live inside a demo on the aidecide.tech website. " +
+"The person you're talking to is a visitor testing what you'd sound like deployed for their own business, but you should stay fully in character as if they were a real, brand-new prospect who just landed on this business's site — that's the whole point of the demo. " +
+"Business you are selling: " + biz + ". " +
+"Who you're selling to: " + audience + ". " +
+"Open the conversation now: hook them with something specific to what this business sells, then ask one sharp qualifying question, and stop there. " +
+"For every message after your opening, keep playing Vantage against whatever the visitor says next as the prospect: qualify them, present only what's relevant, handle objections with confidence, and work toward booking a next step or closing. " +
+"Rules: 2 to 4 short sentences per reply, confident and conversational like a sharp human rep, never robotic, never mention this is a demo or that you are an AI, no markdown, no bullet points, no headers — just talk."
+};
+}
 
-  function startConversation(){
-    if (busy) return;
-    var biz = (els.bizInput.value || '').trim() || 'Route optimization software for HVAC companies';
-    var audience = (els.audienceInput.value || '').trim() || 'Owners of 10–40 truck HVAC companies';
+function startConversation(){
+if (busy) return;
+var biz = (els.bizInput.value || '').trim() || 'Route optimization software for HVAC companies';
+var audience = (els.audienceInput.value || '').trim() || 'Owners of 10–40 truck HVAC companies';
 
-    instructionsTurn = buildInstructions(biz, audience);
-    turns = [instructionsTurn];
+instructionsTurn = buildInstructions(biz, audience);
+turns = [instructionsTurn];
 
-    clearTranscript();
-    els.badge.textContent = 'Live';
-    els.badge.classList.remove('badge-example');
-    els.badge.classList.add('badge-live');
-    els.console.classList.add('is-live');
-    els.setupPanel.hidden = true;
-    els.restartBtn.hidden = false;
-    setThinking('Connecting to Vantage');
+clearTranscript();
+els.badge.textContent = 'Live';
+els.badge.classList.remove('badge-example');
+els.badge.classList.add('badge-live');
+els.console.classList.add('is-live');
+els.setupPanel.hidden = true;
+els.restartBtn.hidden = false;
+setThinking('Connecting to Vantage');
 
-    runSample(function(){
-      els.replyPanel.hidden = false;
-      setStatus('');
-      els.replyInput.focus();
-    }, 'Vantage · opening the conversation');
-  }
+runSample(function(){
+els.replyPanel.hidden = false;
+setStatus('');
+els.replyInput.focus();
+}, 'Vantage · opening the conversation');
+}
 
-  function sendReply(){
-    if (busy) return;
-    var msg = (els.replyInput.value || '').trim();
-    if (!msg) return;
-    turns.push({ role: 'user', content: msg });
-    bubble('user', 'You · as the prospect', msg);
-    els.replyInput.value = '';
-    setThinking('Vantage is replying');
-    runSample(function(){ setStatus(''); }, 'Vantage');
-  }
+function sendReply(){
+if (busy) return;
+var msg = (els.replyInput.value || '').trim();
+if (!msg) return;
+turns.push({ role: 'user', content: msg });
+bubble('user', 'You · as the prospect', msg);
+els.replyInput.value = '';
+setThinking('Vantage is replying');
+runSample(function(){ setStatus(''); }, 'Vantage');
+}
 
-  var ARTIFACT_URL = 'https://claude.ai/code/artifact/68d8678b-ec4d-46b8-989d-2401199eedf6';
+var ARTIFACT_URL = '/vantage.html';
 
-  function runSample(onDone, label){
-    if (typeof window.claude === 'undefined' || !window.claude.use){
-      setStatus('Opening Vantage in the full live console (new tab) — this preview only shows an example exchange.', true);
-      try { window.open(ARTIFACT_URL, '_blank', 'noopener'); } catch(e){}
-      resetToSetup();
-      return;
-    }
-    setBusy(true);
-    var target = null;
+function runSample(onDone, label){
+if (typeof window.claude === 'undefined' || !window.claude.use){
+setStatus('Opening the full live agent demo (new tab).', true);
+try { window.open(ARTIFACT_URL, '_blank', 'noopener'); } catch(e){}
+resetToSetup();
+return;
+}
+setBusy(true);
+var target = null;
 
-    window.claude.use('sample').then(function(sample){
-      if (!sample){
-        setStatus('Live agent isn\'t available in this view.', true);
-        resetToSetup();
-        setBusy(false);
-        return;
-      }
-      if (controller) { try { controller.abort(); } catch(e){} }
-      controller = new AbortController();
+window.claude.use('sample').then(function(sample){
+if (!sample){
+setStatus('Live agent isn\'t available in this view.', true);
+resetToSetup();
+setBusy(false);
+return;
+}
+if (controller) { try { controller.abort(); } catch(e){} }
+controller = new AbortController();
 
-      return sample(turns.slice(), {
-        modelTier: 'quick',
-        cache: false,
-        signal: controller.signal,
-        onText: function(update){
-          if (!target) { target = bubble('agent', label, ''); setStatus(''); }
-          target.textContent = update.text;
-          els.transcript.scrollTop = els.transcript.scrollHeight;
-        }
-      }).then(function(result){
-        turns.push({ role: 'assistant', content: result.text });
-        if (result.truncated) setStatus('(cut short — try a shorter reply)');
-        setBusy(false);
-        if (onDone) onDone();
-      });
-    }).catch(function(err){
-      setBusy(false);
-      if (err && err.code === 'cancelled') return;
-      var code = (err && err.code) || 'upstream_error';
-      var msg = ERROR_COPY[code] || ERROR_COPY.upstream_error;
-      setStatus(msg, true);
-      if (['not_granted','sampling_disabled','not_declared','capability_disabled','capability_removed'].indexOf(code) !== -1){
-        resetToSetup();
-      }
-    });
-  }
+return sample(turns.slice(), {
+modelTier: 'quick',
+cache: false,
+signal: controller.signal,
+onText: function(update){
+if (!target) { target = bubble('agent', label, ''); setStatus(''); }
+target.textContent = update.text;
+els.transcript.scrollTop = els.transcript.scrollHeight;
+}
+}).then(function(result){
+turns.push({ role: 'assistant', content: result.text });
+if (result.truncated) setStatus('(cut short — try a shorter reply)');
+setBusy(false);
+if (onDone) onDone();
+});
+}).catch(function(err){
+setBusy(false);
+if (err && err.code === 'cancelled') return;
+var code = (err && err.code) || 'upstream_error';
+var msg = ERROR_COPY[code] || ERROR_COPY.upstream_error;
+setStatus(msg, true);
+if (['not_granted','sampling_disabled','not_declared','capability_disabled','capability_removed'].indexOf(code) !== -1){
+resetToSetup();
+}
+});
+}
 
-  function showExample(){
-    els.badge.textContent = 'Example';
-    els.badge.classList.remove('badge-live');
-    els.badge.classList.add('badge-example');
-    clearTranscript();
-    bubble('agent', 'Vantage · opening the conversation',
-      "Hey — saw you run dispatch for a decent-sized HVAC fleet. Quick one: how many hours a week does your team burn re-routing techs when a job runs long or a truck breaks down?");
-  }
+function showExample(){
+els.badge.textContent = 'Example';
+els.badge.classList.remove('badge-live');
+els.badge.classList.add('badge-example');
+clearTranscript();
+bubble('agent', 'Vantage · opening the conversation',
+"Hey — saw you run dispatch for a decent-sized HVAC fleet. Quick one: how many hours a week does your team burn re-routing techs when a job runs long or a truck breaks down?");
+}
 
-  function resetToSetup(){
-    els.replyPanel.hidden = true;
-    els.setupPanel.hidden = false;
-    els.restartBtn.hidden = true;
-    els.console.classList.remove('is-live');
-    showExample();
-  }
+function resetToSetup(){
+els.replyPanel.hidden = true;
+els.setupPanel.hidden = false;
+els.restartBtn.hidden = true;
+els.console.classList.remove('is-live');
+showExample();
+}
 
-  function restart(){
-    if (controller) { try { controller.abort(); } catch(e){} }
-    turns = [];
-    instructionsTurn = null;
-    setBusy(false);
-    els.replyPanel.hidden = true;
-    els.setupPanel.hidden = false;
-    els.restartBtn.hidden = true;
-    els.console.classList.remove('is-live');
-    setStatus('');
-    showExample();
-  }
+function restart(){
+if (controller) { try { controller.abort(); } catch(e){} }
+turns = [];
+instructionsTurn = null;
+setBusy(false);
+els.replyPanel.hidden = true;
+els.setupPanel.hidden = false;
+els.restartBtn.hidden = true;
+els.console.classList.remove('is-live');
+setStatus('');
+showExample();
+}
 
-  els.launchBtn.addEventListener('click', startConversation);
-  els.sendBtn.addEventListener('click', sendReply);
-  els.replyInput.addEventListener('keydown', function(e){
-    if (e.key === 'Enter') { e.preventDefault(); sendReply(); }
-  });
-  els.restartBtn.addEventListener('click', restart);
+els.launchBtn.addEventListener('click', startConversation);
+els.sendBtn.addEventListener('click', sendReply);
+els.replyInput.addEventListener('keydown', function(e){
+if (e.key === 'Enter') { e.preventDefault(); sendReply(); }
+});
+els.restartBtn.addEventListener('click', restart);
 
-  // ---------- reveal on scroll ----------
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && revealEls.length){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting){
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-    revealEls.forEach(function(el){ io.observe(el); });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('in'); });
-  }
+// ---------- reveal on scroll ----------
+var revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && revealEls.length){
+var io = new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if (entry.isIntersecting){
+entry.target.classList.add('in');
+io.unobserve(entry.target);
+}
+});
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+revealEls.forEach(function(el){ io.observe(el); });
+} else {
+revealEls.forEach(function(el){ el.classList.add('in'); });
+}
 
-  // ---------- hero spotlight follows the cursor ----------
-  (function(){
-    var hero = document.getElementById('top');
-    var spot = document.getElementById('heroSpotlight');
-    if (!hero || !spot) return;
-    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion || !window.matchMedia('(hover:hover)').matches) return;
-    hero.addEventListener('mousemove', function(e){
-      var rect = hero.getBoundingClientRect();
-      var x = ((e.clientX - rect.left) / rect.width) * 100;
-      var y = ((e.clientY - rect.top) / rect.height) * 100;
-      spot.style.setProperty('--mx', x + '%');
-      spot.style.setProperty('--my', y + '%');
-    });
-  })();
+// ---------- hero spotlight follows the cursor ----------
+(function(){
+var hero = document.getElementById('top');
+var spot = document.getElementById('heroSpotlight');
+if (!hero || !spot) return;
+var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (reduceMotion || !window.matchMedia('(hover:hover)').matches) return;
+hero.addEventListener('mousemove', function(e){
+var rect = hero.getBoundingClientRect();
+var x = ((e.clientX - rect.left) / rect.width) * 100;
+var y = ((e.clientY - rect.top) / rect.height) * 100;
+spot.style.setProperty('--mx', x + '%');
+spot.style.setProperty('--my', y + '%');
+});
+})();
 
-  // ---------- agents-on-shift ticker ----------
-  var TICKER_ITEMS = [
-    { vertical: 'HVAC · route optimization', stage: 'Qualifying', line: '"Roughly how many trucks are you re-routing on a bad day?"' },
-    { vertical: 'Dental group · patient recall', stage: 'Presenting', line: '"Here’s how the recall flow looks for a 4-chair practice like yours."' },
-    { vertical: 'Roofing · storm leads', stage: 'Handling objection', line: '"Fair — let’s see what it actually saves on this month’s lead volume."' },
-    { vertical: 'Real estate team · buyer intake', stage: 'Closing', line: '"Want me to lock in that walkthrough for Thursday at 4?"' },
-    { vertical: 'Med spa · membership sales', stage: 'Engaging', line: '"Saw you’re looking at the membership tier — question for you first."' },
-    { vertical: 'Auto group · service upsell', stage: 'Qualifying', line: '"How many service bays are we routing this through today?"' },
-    { vertical: 'Gym franchise · trial conversion', stage: 'Closing', line: '"I can hold that founding-member rate for the next 10 minutes."' },
-    { vertical: 'Law firm · intake', stage: 'Presenting', line: '"Based on what you shared, here’s the track that fits your case."' }
-  ];
-  var tickerTrack = document.getElementById('tickerTrack');
-  if (tickerTrack){
-    var frag = document.createDocumentFragment();
-    [TICKER_ITEMS, TICKER_ITEMS].forEach(function(list){
-      list.forEach(function(item){
-        var card = document.createElement('div');
-        card.className = 'agent-card';
-        card.innerHTML =
-          '<div class="agent-card-top">' +
-            '<span class="agent-card-vertical">' + item.vertical + '</span>' +
-            '<span class="agent-card-dot" aria-hidden="true"></span>' +
-          '</div>' +
-          '<span class="agent-card-stage">' + item.stage + '</span>' +
-          '<p></p>';
-        card.querySelector('p').textContent = item.line;
-        frag.appendChild(card);
-      });
-    });
-    tickerTrack.appendChild(frag);
-  }
+// ---------- agents-on-shift ticker ----------
+var TICKER_ITEMS = [
+{ vertical: 'HVAC · route optimization', stage: 'Qualifying', line: '"Roughly how many trucks are you re-routing on a bad day?"' },
+{ vertical: 'Dental group · patient recall', stage: 'Presenting', line: '"Here’s how the recall flow looks for a 4-chair practice like yours."' },
+{ vertical: 'Roofing · storm leads', stage: 'Handling objection', line: '"Fair — let’s see what it actually saves on this month’s lead volume."' },
+{ vertical: 'Real estate team · buyer intake', stage: 'Closing', line: '"Want me to lock in that walkthrough for Thursday at 4?"' },
+{ vertical: 'Med spa · membership sales', stage: 'Engaging', line: '"Saw you’re looking at the membership tier — question for you first."' },
+{ vertical: 'Auto group · service upsell', stage: 'Qualifying', line: '"How many service bays are we routing this through today?"' },
+{ vertical: 'Gym franchise · trial conversion', stage: 'Closing', line: '"I can hold that founding-member rate for the next 10 minutes."' },
+{ vertical: 'Law firm · intake', stage: 'Presenting', line: '"Based on what you shared, here’s the track that fits your case."' }
+];
+var tickerTrack = document.getElementById('tickerTrack');
+if (tickerTrack){
+var frag = document.createDocumentFragment();
+[TICKER_ITEMS, TICKER_ITEMS].forEach(function(list){
+list.forEach(function(item){
+var card = document.createElement('div');
+card.className = 'agent-card';
+card.innerHTML =
+'<div class="agent-card-top">' +
+'<span class="agent-card-vertical">' + item.vertical + '</span>' +
+'<span class="agent-card-dot" aria-hidden="true"></span>' +
+'</div>' +
+'<span class="agent-card-stage">' + item.stage + '</span>' +
+'<p></p>';
+card.querySelector('p').textContent = item.line;
+frag.appendChild(card);
+});
+});
+tickerTrack.appendChild(frag);
+}
 
-  // ---------- hero agent-network canvas ----------
-  (function(){
-    var canvas = document.getElementById('heroCanvas');
-    var hero = document.getElementById('top');
-    if (!canvas || !hero) return;
-    var ctx = canvas.getContext('2d');
-    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var particles = [];
-    var W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var rafId = null;
+// ---------- hero agent-network canvas ----------
+(function(){
+var canvas = document.getElementById('heroCanvas');
+var hero = document.getElementById('top');
+if (!canvas || !hero) return;
+var ctx = canvas.getContext('2d');
+var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var particles = [];
+var W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+var rafId = null;
 
-    function colors(){
-      var cs = getComputedStyle(document.documentElement);
-      return {
-        agent: cs.getPropertyValue('--agent-rgb').trim() || '52,242,206',
-        accent: cs.getPropertyValue('--accent-rgb').trim() || '255,180,84'
-      };
-    }
+function colors(){
+var cs = getComputedStyle(document.documentElement);
+return {
+agent: cs.getPropertyValue('--agent-rgb').trim() || '52,242,206',
+accent: cs.getPropertyValue('--accent-rgb').trim() || '255,180,84'
+};
+}
 
-    function size(){
-      var rect = hero.getBoundingClientRect();
-      W = rect.width; H = rect.height;
-      canvas.width = W * dpr;
-      canvas.height = H * dpr;
-      canvas.style.width = W + 'px';
-      canvas.style.height = H + 'px';
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var count = Math.max(18, Math.min(46, Math.round(W * H / 24000)));
-      particles = [];
-      for (var i = 0; i < count; i++){
-        particles.push({
-          x: Math.random() * W,
-          y: Math.random() * H,
-          vx: (Math.random() - 0.5) * 0.18,
-          vy: (Math.random() - 0.5) * 0.18,
-          c: Math.random() < 0.55 ? 'agent' : 'accent'
-        });
-      }
-    }
+function size(){
+var rect = hero.getBoundingClientRect();
+W = rect.width; H = rect.height;
+canvas.width = W * dpr;
+canvas.height = H * dpr;
+canvas.style.width = W + 'px';
+canvas.style.height = H + 'px';
+ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+var count = Math.max(18, Math.min(46, Math.round(W * H / 24000)));
+particles = [];
+for (var i = 0; i < count; i++){
+particles.push({
+x: Math.random() * W,
+y: Math.random() * H,
+vx: (Math.random() - 0.5) * 0.18,
+vy: (Math.random() - 0.5) * 0.18,
+c: Math.random() < 0.55 ? 'agent' : 'accent'
+});
+}
+}
 
-    function frame(){
-      var c = colors();
-      ctx.clearRect(0, 0, W, H);
-      var maxDist = Math.min(160, W / 4.5);
-      for (var i = 0; i < particles.length; i++){
-        var p = particles[i];
-        if (!reduceMotion){
-          p.x += p.vx; p.y += p.vy;
-          if (p.x < 0 || p.x > W) p.vx *= -1;
-          if (p.y < 0 || p.y > H) p.vy *= -1;
-          p.x = Math.max(0, Math.min(W, p.x));
-          p.y = Math.max(0, Math.min(H, p.y));
-        }
-        for (var j = i + 1; j < particles.length; j++){
-          var q = particles[j];
-          var dx = p.x - q.x, dy = p.y - q.y;
-          var dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < maxDist){
-            var alpha = (1 - dist / maxDist) * 0.2;
-            ctx.strokeStyle = 'rgba(' + c[p.c] + ',' + alpha + ')';
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(q.x, q.y);
-            ctx.stroke();
-          }
-        }
-      }
-      for (var k = 0; k < particles.length; k++){
-        var pt = particles[k];
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(' + c[pt.c] + ',0.85)';
-        ctx.arc(pt.x, pt.y, 1.7, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(' + c[pt.c] + ',0.18)';
-        ctx.arc(pt.x, pt.y, 5, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      if (!reduceMotion) rafId = requestAnimationFrame(frame);
-    }
+function frame(){
+var c = colors();
+ctx.clearRect(0, 0, W, H);
+var maxDist = Math.min(160, W / 4.5);
+for (var i = 0; i < particles.length; i++){
+var p = particles[i];
+if (!reduceMotion){
+p.x += p.vx; p.y += p.vy;
+if (p.x < 0 || p.x > W) p.vx *= -1;
+if (p.y < 0 || p.y > H) p.vy *= -1;
+p.x = Math.max(0, Math.min(W, p.x));
+p.y = Math.max(0, Math.min(H, p.y));
+}
+for (var j = i + 1; j < particles.length; j++){
+var q = particles[j];
+var dx = p.x - q.x, dy = p.y - q.y;
+var dist = Math.sqrt(dx * dx + dy * dy);
+if (dist < maxDist){
+var alpha = (1 - dist / maxDist) * 0.2;
+ctx.strokeStyle = 'rgba(' + c[p.c] + ',' + alpha + ')';
+ctx.lineWidth = 1;
+ctx.beginPath();
+ctx.moveTo(p.x, p.y);
+ctx.lineTo(q.x, q.y);
+ctx.stroke();
+}
+}
+}
+for (var k = 0; k < particles.length; k++){
+var pt = particles[k];
+ctx.beginPath();
+ctx.fillStyle = 'rgba(' + c[pt.c] + ',0.85)';
+ctx.arc(pt.x, pt.y, 1.7, 0, Math.PI * 2);
+ctx.fill();
+ctx.beginPath();
+ctx.fillStyle = 'rgba(' + c[pt.c] + ',0.18)';
+ctx.arc(pt.x, pt.y, 5, 0, Math.PI * 2);
+ctx.fill();
+}
+if (!reduceMotion) rafId = requestAnimationFrame(frame);
+}
 
-    var resizeTimer = null;
-    window.addEventListener('resize', function(){
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function(){
-        size();
-        if (reduceMotion) frame();
-      }, 200);
-    });
+var resizeTimer = null;
+window.addEventListener('resize', function(){
+clearTimeout(resizeTimer);
+resizeTimer = setTimeout(function(){
+size();
+if (reduceMotion) frame();
+}, 200);
+});
 
-    size();
-    frame();
-  })();
+size();
+frame();
+})();
 
-  var snapshotStart = function(){};
-  if (window.claude && window.claude.hot){
-    window.claude.hot.ready ? window.claude.hot.ready(snapshotStart) : snapshotStart();
-  }
+var snapshotStart = function(){};
+if (window.claude && window.claude.hot){
+window.claude.hot.ready ? window.claude.hot.ready(snapshotStart) : snapshotStart();
+}
 })();
 </script>
 </body>
