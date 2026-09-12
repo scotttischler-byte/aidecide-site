@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vantage Recruit &amp; Advisor</title>
+<meta name="description" content="Live agent demo — Vantage Recruit (MLM) and Vantage Advisor (insurance), an aidecide.tech add-on.">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#07080B; --bg-2:#0B0D12; --surface:#12151C; --surface-2:#191D26;
+  --line:rgba(255,255,255,0.09); --line-strong:rgba(255,255,255,0.18);
+  --ink:#F4F6F8; --ink-muted:#A7AFBD; --ink-faint:#6B7280;
+  --agent:#34F2CE; --agent-rgb:52,242,206;
+  --accent:#FFB454; --accent-rgb:255,180,84;
+  --radius-m:14px; --radius-l:22px;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  padding:32px 20px 60px; padding-block:32px 60px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+.wrap{max-width:760px; margin:0 auto;}
+.eyebrow{
+  font-family:"JetBrains Mono", monospace; font-size:12px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--agent); display:flex; align-items:center; gap:8px;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--agent);box-shadow:0 0 10px rgba(var(--agent-rgb),.8);}
+h1{
+  font-family:"Bricolage Grotesque", sans-serif; font-weight:800; letter-spacing:-.01em;
+  font-size:clamp(28px,4vw,40px); margin:10px 0 8px; text-wrap:balance;
+}
+.sub{color:var(--ink-muted); font-size:15.5px; line-height:1.55; max-width:60ch; margin:0 0 24px;}
+.tabs{display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap;}
+.tab{
+  font-family:"JetBrains Mono", monospace; font-size:12.5px; letter-spacing:.03em;
+  padding:9px 16px; border-radius:999px; border:1px solid var(--line-strong);
+  background:var(--surface); color:var(--ink-muted); cursor:pointer; transition:all .15s;
+}
+.tab.active{background:rgba(var(--agent-rgb),.14); border-color:rgba(var(--agent-rgb),.5); color:var(--agent);}
+.console{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-l);
+  box-shadow:0 24px 64px -28px rgba(0,0,0,.75); overflow:hidden;
+}
+.console-head{
+  display:flex; align-items:center; justify-content:space-between; padding:14px 18px;
+  border-bottom:1px solid var(--line); font-family:"JetBrains Mono", monospace;
+  font-size:12px; letter-spacing:.04em; color:var(--ink-muted);
+}
+.console-head b{color:var(--ink);}
+.live-pill{display:flex;align-items:center;gap:6px;color:var(--agent);}
+#transcript{padding:18px; display:flex; flex-direction:column; gap:12px; min-height:220px; max-height:440px; overflow-y:auto;}
+.bubble{max-width:82%; padding:12px 15px; border-radius:var(--radius-m); font-size:14.5px; line-height:1.5; opacity:0; transform:translateY(6px); animation:in .28s ease forwards;}
+@keyframes in{to{opacity:1;transform:translateY(0);}}
+.bubble.agent{align-self:flex-start; background:rgba(var(--agent-rgb),.1); border:1px solid rgba(var(--agent-rgb),.25);}
+.bubble.user{align-self:flex-end; background:var(--surface-2); border:1px solid var(--line-strong);}
+.bubble .who{
+  display:block; font-family:"JetBrains Mono", monospace; font-size:10.5px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink-faint); margin-bottom:4px;
+}
+.thinking{align-self:flex-start; color:var(--ink-faint); font-size:13px; font-style:italic; padding:0 15px;}
+.inputrow{display:flex; gap:10px; padding:14px 18px; border-top:1px solid var(--line);}
+#msgInput{
+  flex:1; background:var(--bg-2); border:1px solid var(--line-strong); border-radius:10px;
+  color:var(--ink); padding:11px 14px; font-size:14.5px; font-family:inherit;
+}
+#msgInput:focus{outline:none; border-color:rgba(var(--agent-rgb),.6);}
+button{font-family:inherit; cursor:pointer; border:none;}
+#sendBtn{
+  background:linear-gradient(135deg,var(--agent),var(--accent)); color:#04211D;
+  font-weight:700; padding:0 20px; border-radius:10px; font-size:14px;
+}
+#sendBtn:disabled{opacity:.5; cursor:default;}
+.restart{
+  background:none; border:1px solid var(--line-strong); color:var(--ink-muted);
+  padding:8px 14px; border-radius:8px; font-size:12.5px; margin-top:14px;
+}
+.note{font-size:12.5px; color:var(--ink-faint); margin-top:10px; line-height:1.5;}
+::-webkit-scrollbar{width:8px;} ::-webkit-scrollbar-thumb{background:var(--line-strong); border-radius:8px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow"><span class="dot"></span> AIDECIDE ADD-ON &middot; AGENT DEMO</div>
+  <h1>Vantage Recruit &amp; Vantage Advisor</h1>
+  <p class="sub">One agent engine, tuned for the two hardest sales conversations in direct sales: recruiting into an opportunity, and qualifying an insurance lead. Pick a persona, and reply as a real prospect would.</p>
+
+  <div class="tabs">
+    <button class="tab active" data-persona="mlm">Vantage Recruit &middot; MLM / Network Marketing</button>
+    <button class="tab" data-persona="insurance">Vantage Advisor &middot; Insurance</button>
+  </div>
+
+  <div class="console">
+    <div class="console-head">
+      <span>VANTAGE &mdash; AGENT CONSOLE</span>
+      <span class="live-pill"><span class="dot"></span> <b id="personaLabel">Vantage Recruit</b></span>
+    </div>
+    <div id="transcript"></div>
+    <div class="inputrow">
+      <input id="msgInput" type="text" placeholder="Type anything a prospect might say, then hit Send..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+  <button class="restart" id="restartBtn">&#8635; Restart conversation</button>
+  <p class="note">Demo runs a scripted example conversation for this walkthrough &mdash; the live version responds dynamically to whatever a real prospect says.</p>
+</div>
+
+<script>
+(function(){
+  var SCRIPTS = {
+    mlm: {
+      label: "Vantage Recruit",
+      steps: [
+        {agent:"Hey! Saw you liked one of my posts about the skincare line I've been using — you looking to just switch products, or were you curious about the business side of it too?"},
+        {user:"Kind of both honestly, but isn't this one of those pyramid scheme things?"},
+        {agent:"Totally fair question — glad you asked instead of just scrolling past. A pyramid scheme has no real product and only pays you for recruiting. Here it's the opposite: you can just buy and use the products with zero obligation, and the income side only exists if people actually want the skincare, which they already do — I use it myself. Want me to break down what the time and money actually look like to start?"},
+        {user:"Sure, how much does it cost and how much time would I need?"},
+        {agent:"Starter kit runs $99 and most people put in 3–5 hours a week around their normal job — no quitting anything, no inventory pressure. Everyone's results vary a lot depending on effort, which is exactly why the real conversation should happen with your actual sponsor, not me. Want me to get you on a quick call with her this week?"},
+        {user:"Yeah, let's do that."},
+        {agent:"Perfect — I'll pass your info to your sponsor now and she'll reach out today to find a time. Excited for you to hear the real story from someone living it!"}
+      ]
+    },
+    insurance: {
+      label: "Vantage Advisor",
+      steps: [
+        {agent:"Thanks for reaching out about coverage! To point you toward the right options — is this mainly about life insurance, health coverage, or something like Medicare or final expense?"},
+        {user:"Life insurance I think, but I already have some through my job."},
+        {agent:"Good to know — employer life coverage is a great start, but it usually ends the day you leave that job and often only covers 1–2x your salary. A lot of people layer a small personal policy underneath so their family's protected either way. Mind if I ask roughly your age range and whether anyone depends on your income?"},
+        {user:"I'm 34, married, one kid."},
+        {agent:"Got it — at 34 with a spouse and a child, most people in your situation look at a term life policy sized around 10–12x income, which tends to be very affordable at your age. I can't quote an exact rate myself, but I can get you on a short call with one of our licensed agents who'll pull real numbers for your situation — want me to set that up?"},
+        {user:"Yeah that works, how much does something like that usually run though?"},
+        {agent:"It really depends on health, coverage amount and term length, so I don't want to guess and give you a number that's off — that's exactly what the licensed agent call is for. I'm booking you in now; you'll get a text to pick a time today or tomorrow."}
+      ]
+    }
+  };
+
+  var current = 'mlm';
+  var stepIndex = 0;
+  var transcriptEl = document.getElementById('transcript');
+  var input = document.getElementById('msgInput');
+  var sendBtn = document.getElementById('sendBtn');
+  var label = document.getElementById('personaLabel');
+
+  function bubble(role, text, cb){
+    var b = document.createElement('div');
+    b.className = 'bubble ' + (role === 'agent' ? 'agent' : 'user');
+    var who = document.createElement('span');
+    who.className = 'who';
+    who.textContent = role === 'agent' ? SCRIPTS[current].label : 'Prospect';
+    b.appendChild(who);
+    var body = document.createElement('div');
+    body.textContent = text;
+    b.appendChild(body);
+    transcriptEl.appendChild(b);
+    transcriptEl.scrollTop = transcriptEl.scrollHeight;
+    if (cb) cb();
+  }
+
+  function showThinking(next){
+    var t = document.createElement('div');
+    t.className = 'thinking';
+    t.textContent = SCRIPTS[current].label + ' is typing...';
+    transcriptEl.appendChild(t);
+    transcriptEl.scrollTop = transcriptEl.scrollHeight;
+    setTimeout(function(){ t.remove(); next(); }, 900 + Math.random()*500);
+  }
+
+  function playAgentStep(){
+    var steps = SCRIPTS[current].steps;
+    if (stepIndex >= steps.length) { sendBtn.disabled = true; input.disabled = true; input.placeholder = "End of scripted demo — hit Restart to run it again"; return; }
+    var step = steps[stepIndex];
+    if (step.agent) {
+      showThinking(function(){
+        bubble('agent', step.agent);
+        stepIndex++;
+        // if next step is also an agent line (shouldn't happen) keep going; otherwise wait for user
+      });
+    }
+  }
+
+  function resetConversation(){
+    transcriptEl.innerHTML = '';
+    stepIndex = 0;
+    input.disabled = false;
+    sendBtn.disabled = false;
+    input.placeholder = "Type anything a prospect might say, then hit Send...";
+    playAgentStep();
+  }
+
+  function switchPersona(p){
+    current = p;
+    label.textContent = SCRIPTS[p].label;
+    document.querySelectorAll('.tab').forEach(function(t){
+      t.classList.toggle('active', t.dataset.persona === p);
+    });
+    resetConversation();
+  }
+
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){ switchPersona(t.dataset.persona); });
+  });
+  document.getElementById('restartBtn').addEventListener('click', resetConversation);
+
+  function sendMessage(){
+    var text = input.value.trim();
+    if (!text || sendBtn.disabled) return;
+    input.value = '';
+    var steps = SCRIPTS[current].steps;
+    // show what the user typed, but the script advances on its own scripted line
+    bubble('user', text);
+    stepIndex++; // consume the scripted "user" placeholder line
+    setTimeout(playAgentStep, 250);
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keydown', function(e){ if (e.key === 'Enter') sendMessage(); });
+
+  resetConversation();
+})();
+</script>
+</body>
+</html>
